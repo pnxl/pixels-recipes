@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-screen flex w-full">
     <div
-      class="w-full bg-gray-100 flex justify-center text-gray-800 dark:bg-gray-900 md:dark:bg-[rgb(9,14,24)] dark:text-gray-200"
+      class="w-full bg-neutral-100 flex justify-center text-neutral-800 dark:bg-neutral-900 md:dark:bg-[rgb(11,11,11)] dark:text-neutral-200"
     >
       <div class="md:flex flex-col justify-center">
         <div
-          class="md:dark:border-gray-700 md:my-16 dark:bg-gray-900 bg-gray-100 md:shadow-2xl md:drop-shadow-2xl md:border-gray-300 md:border min-h-[80vh] w-screen md:w-[80vw] lg:w-[70vw] xl:w-[60vw] md:rounded-xl"
+          class="md:dark:border-neutral-700 md:my-16 dark:bg-neutral-900 bg-neutral-100 md:shadow-2xl md:drop-shadow-2xl md:border-neutral-300 md:border min-h-[80vh] w-screen md:w-[80vw] lg:w-[70vw] xl:w-[60vw] md:rounded-xl"
         >
           <div
-            class="gap-x-8 hidden md:flex dark:bg-gray-800 bg-gray-200 md:rounded-t-xl md:dark:border-gray-700 md:border-gray-300 md:border-b px-8 py-4"
+            class="gap-x-8 hidden md:flex dark:bg-neutral-800 bg-neutral-200 md:rounded-t-xl md:dark:border-neutral-700 md:border-neutral-300 md:border-b px-8 py-4"
           >
             <button class="flex gap-x-2 no-underline" @click="$router.go(-1)">
               <i
@@ -35,11 +35,12 @@
           </div>
 
           <div class="px-5 py-4 w-full flex flex-col">
-            <div class="flex-col gap-y-4 flex px-4 py-8 overflow-y-auto">
+            <div class="flex-col gap-y-4 flex py-8 overflow-y-auto">
+            <!-- <div class="flex-col gap-y-4 flex px-4 py-8 overflow-y-auto"> -->
               <!-- <div class="grid md:grid-cols-2 gap-x-4 gap-y-4 w-full">  -->
                 <!-- <div class="gap-y-4 flex flex-col">
                   <p
-                    class="text-lg font-medium dark:text-gray-200 text-gray-800"
+                    class="text-lg font-medium dark:text-neutral-200 text-neutral-800"
                   >
                     All Series — {{ series.length }}
                   </p>
@@ -50,9 +51,9 @@
                     class="w-full no-underline dark:text-blue-400 hover:dark:text-blue-300 hover:text-blue-600 text-blue-500"
                   >
                     <div
-                      class="flex flex-col md:-ml-2 p-2 rounded-lg border-gray-200 dark:border-gray-800 border-2 dark:hover:bg-gray-700 hover:bg-gray-300 dark:hover:bg-opacity-40 hover:bg-opacity-20 transition"
+                      class="flex flex-col md:-ml-2 p-2 rounded-lg border-neutral-200 dark:border-neutral-800 border-2 dark:hover:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-opacity-40 hover:bg-opacity-20 transition"
                     >
-                      <p class="text-sm no-underline text-gray-500">
+                      <p class="text-sm no-underline text-neutral-500">
                         Started by {{ story.writers.join(", ") }} on
                         {{ story.started }}
                       </p>
@@ -64,7 +65,7 @@
                 </div> -->
                 <div class="gap-y-4 flex flex-col">
                   <p
-                    class="text-lg font-medium dark:text-gray-200 md:ml-4 text-gray-800"
+                    class="text-lg font-medium dark:text-neutral-200 md:ml-4 text-neutral-800"
                   >
                     All Oneshots — {{ oneshots.length }}
                   </p>
@@ -75,10 +76,9 @@
                     class="w-full no-underline dark:text-blue-400 hover:dark:text-blue-300 hover:text-blue-600 text-blue-500"
                   >
                     <div
-                      class="flex flex-col md:ml-2 p-2 rounded-lg border-gray-200 dark:border-gray-800 border-2 dark:hover:bg-gray-700 hover:bg-gray-300 dark:hover:bg-opacity-40 hover:bg-opacity-20 transition"
+                      class="flex flex-col md:ml-2 p-2 rounded-lg border-neutral-200 dark:border-neutral-800 border-2 dark:hover:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-opacity-40 hover:bg-opacity-20 transition"
                     >
-                      <p class="text-sm no-underline text-gray-500 text-ellipsis overflow-hidden">
-                        Written by {{ story.writers.join(", ") }} on
+                      <p class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden">
                         {{ story.date }}
                       </p>
                       <span class="underline font-medium text-ellipsis overflow-hidden">
@@ -101,7 +101,7 @@ export default {
   async asyncData({ $content }) {
 
     const oneshots = await $content("oneshots")
-      .only(["slug", "title", "writers", "date"])
+      .only(["slug", "title", "date"])
       .sortBy("num", "asc")
       .fetch();
     return {

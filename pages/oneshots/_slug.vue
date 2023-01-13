@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-screen flex w-full">
     <div
-      class="w-full bg-gray-100 flex justify-center text-gray-800 dark:bg-[rgb(9,14,24)] dark:text-gray-200"
+      class="w-full bg-neutral-100 flex justify-center text-neutral-800 dark:bg-[rgb(11,11,11)] dark:text-neutral-200"
     >
       <div class="flex flex-col justify-center">
         <div
-          class="md:dark:border-gray-700 md:my-16 dark:bg-gray-900 bg-gray-100 shadow-2xl drop-shadow-2xl md:border-gray-300 md:border min-h-[80vh] w-screen md:w-[80vw] lg:w-[70vw] xl:w-[60vw] md:rounded-xl"
+          class="md:dark:border-neutral-700 md:my-16 dark:bg-neutral-900 bg-neutral-100 shadow-2xl drop-shadow-2xl md:border-neutral-300 md:border min-h-[80vh] w-screen md:w-[80vw] lg:w-[70vw] xl:w-[60vw] md:rounded-xl"
         >
           <div
-            class="gap-x-8 hidden md:flex dark:bg-gray-800 bg-gray-200 md:rounded-t-xl md:dark:border-gray-700 md:border-gray-300 md:border-b px-8 py-4"
+            class="gap-x-8 hidden md:flex dark:bg-neutral-800 bg-neutral-200 md:rounded-t-xl md:dark:border-neutral-700 md:border-neutral-300 md:border-b px-8 py-4"
           >
             <nuxt-link
               class="flex gap-x-2 no-underline"
@@ -36,18 +36,18 @@
             </nuxt-link>
             <i class="fa-solid fa-share-from-square my-auto text-lg"></i>
           </div>
-          <div class="px-8 py-4 w-full flex flex-col">
+          <div class="px-8 py-8 w-full flex flex-col">
             <div class="w-full justify-center flex">
               <span
-                class="my-auto text-center text-gray-400 font-light text-sm"
+                class="my-auto text-center text-neutral-400 font-light text-sm"
                 >{{ page.date }}</span
               >
             </div>
-            <div class="mt-6 mb-6">
+            <div class="mt-8">
               <h1 class="text-3xl font-bold">{{ page.title }}</h1>
               <nuxt-content
                 :document="page"
-                class="prose mt-6 md:max-w-none dark:prose-invert prose-gray prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md dark:prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl"
+                class="prose mt-6 md:max-w-none dark:prose-invert prose-neutral prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md dark:prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-neutral-500 prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl"
               />
             </div>
           </div>
