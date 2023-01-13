@@ -62,7 +62,7 @@
               </div>
               <nuxt-content
                 :document="page"
-                class="prose mt-8 md:max-w-none prose-invert prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-neutral-500 prose-code:before:content-none prose-code:after:content-none"
+                class="prose mt-8 md:max-w-none max-w-full prose-invert prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-neutral-500 prose-code:before:content-none prose-code:after:content-none"
               />
             </div>
           </div>
