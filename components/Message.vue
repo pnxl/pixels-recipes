@@ -10,7 +10,7 @@
           v-if="contact"
           :class="
             (alignment === 'right' ? 'pr-12 pl-2 text-right' : 'pl-12 pr-2') +
-            '  text-neutral-500 text-sm mt-2'
+            '  text-neutral-500 text-sm mt-1'
           "
         >
           {{ contact }}
