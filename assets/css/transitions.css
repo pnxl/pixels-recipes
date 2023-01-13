@@ -1,0 +1,24 @@
+.story-enter-active {
+  animation: acrossIn 0.25s ease-out both;
+}
+.story-leave-active {
+  animation: acrossOut 0.25s ease-in both;
+}
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(0, 1.5%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 1.5%, 0);
+    opacity: 0;
+  }
+}

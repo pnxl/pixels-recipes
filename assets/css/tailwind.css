@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply flex w-full justify-center;
+}
