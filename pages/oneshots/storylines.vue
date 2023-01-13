@@ -110,7 +110,7 @@ export default {
   },
   head() {
     return {
-      title: `Storylines - stories.fangdustry.me`,
+      title: `Storylines - Nadine's journal`,
     };
   },
 };

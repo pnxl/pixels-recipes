@@ -82,7 +82,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.page.title} - stories.fangdustry.me`,
+      title: `${this.page.title} - Nadine's journal`,
     };
   },
 };
