@@ -29,12 +29,11 @@
           <div class="md:hidden flex flex-row px-8 pt-8 pb-2 justify-between">
             <nuxt-link
               to="/oneshots/storylines"
-              class="flex md:hidden gap-x-2 no-underline text-blue-400 hover:text-blue-300"
+              class="flex md:hidden gap-x-2 no-underline text-red-400 hover:text-red-300"
             >
               <i class="fa-solid fa-chevron-left my-auto text-lg"></i>
               <p class="my-auto">Episode Switcher</p>
             </nuxt-link>
-            <i class="fa-solid fa-share-from-square my-auto text-lg"></i>
           </div>
           <div class="px-8 py-8 w-full flex flex-col">
             <div class="w-full justify-center flex">
