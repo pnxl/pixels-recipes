@@ -8,7 +8,7 @@
       <span
         :class="
           (alignment === 'right' ? 'pr-12 pl-2 text-right' : 'pl-12 pr-2') +
-          '  dark:text-neutral-500 text-neutral-600 text-sm pb-2 bg-gradient-to-br'
+          '  text-neutral-500 text-sm pb-2 bg-gradient-to-br'
         "
       >
         {{ contact }}
@@ -41,11 +41,11 @@
           :class="
             (!img
               ? alignment === 'right'
-                ? 'mr-11 dark:bg-blue-600 bg-blue-400 ml-11'
-                : 'ml-11 dark:bg-neutral-700 bg-neutral-200 mr-11'
+                ? 'mr-11 bg-neutral-500 ml-11'
+                : 'ml-11 bg-neutral-700 mr-11'
               : alignment === 'right'
-              ? 'dark:bg-blue-600 bg-blue-400 ml-11'
-              : 'dark:bg-neutral-700 bg-neutral-200 mr-11') +
+              ? 'bg-neutral-500 ml-11'
+              : 'bg-neutral-700 mr-11') +
             ' w-fit py-2 px-4 rounded-xl text-neutral-100 my-auto'
           "
         >
