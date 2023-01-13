@@ -45,17 +45,17 @@
             <div class="mt-8 prose-neutral">
               <h1 class="text-3xl font-bold">{{ page.title }}</h1>
               <div
-                class="mt-2 flex space-x-2 text-neutral-400"
+                class="mt-4 md:mt-2 md:flex md:space-x-2 text-neutral-400 p-3 md:p-0 rounded-xl border md:border-none border-neutral-500"
               >
-                <i class="fa-solid fa-headphones-simple text-md my-auto"></i>
+                <i class="fa-solid fa-headphones-simple text-xl md:text-md my-auto"></i>
                 <p class="my-auto"
                   >The author recommends you to listen to <a :href="page.song[1]">{{  page.song[0] }}</a> while listening.</p
                 >
               </div>
               <div
-                class="mt-2 flex space-x-2 text-neutral-400"
+                class="mt-4 md:mt-2 md:flex md:space-x-2 text-neutral-400 p-3 md:p-0 rounded-xl border md:border-none border-neutral-500"
               >
-                <i class="fa-solid fa-triangle-exclamation text-md my-auto"></i>
+                <i class="fa-solid fa-triangle-exclamation text-xl md:text-md my-auto"></i>
                 <p class="my-auto"
                   >This work is purely fictional, and the story’s characters DO NOT represent any people in real life.</p
                 >
