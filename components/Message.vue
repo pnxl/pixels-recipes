@@ -8,7 +8,7 @@
       <span
         :class="
           (alignment === 'right' ? 'pr-12 pl-2 text-right' : 'pl-12 pr-2') +
-          '  dark:text-gray-500 text-gray-600 text-sm pb-2 bg-gradient-to-br'
+          '  dark:text-neutral-500 text-neutral-600 text-sm pb-2 bg-gradient-to-br'
         "
       >
         {{ contact }}
@@ -31,7 +31,7 @@
               : alignment === 'right'
               ? 'ml-12'
               : 'mr-12') +
-            ' w-fit text-5xl rounded-xl text-gray-100 my-auto '
+            ' w-fit text-5xl rounded-xl text-neutral-100 my-auto '
           "
         >
           <slot />
@@ -42,11 +42,11 @@
             (!img
               ? alignment === 'right'
                 ? 'mr-11 dark:bg-blue-600 bg-blue-400 ml-11'
-                : 'ml-11 dark:bg-neutral-700 bg-gray-200 mr-11'
+                : 'ml-11 dark:bg-neutral-700 bg-neutral-200 mr-11'
               : alignment === 'right'
               ? 'dark:bg-blue-600 bg-blue-400 ml-11'
-              : 'dark:bg-neutral-700 bg-gray-200 mr-11') +
-            ' w-fit py-2 px-4 rounded-xl text-gray-100 my-auto'
+              : 'dark:bg-neutral-700 bg-neutral-200 mr-11') +
+            ' w-fit py-2 px-4 rounded-xl text-neutral-100 my-auto'
           "
         >
           <slot />
