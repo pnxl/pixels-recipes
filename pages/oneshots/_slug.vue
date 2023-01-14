@@ -47,7 +47,7 @@
               <div
                 class="mt-4 flex md:space-x-2 space-x-3 text-neutral-400 p-3 md:p-0 rounded-xl border md:border-none border-neutral-500"
               >
-                <i class="fa-solid fa-headphones-simple text-2xl md:text-md md:my-auto"></i>
+                <i class="fa-solid fa-headphones-simple text-2xl md:text-base md:my-auto"></i>
                 <p class="my-auto"
                   >The author recommends you to listen to <a :href="page.song[1]">{{  page.song[0] }}</a> while reading.</p
                 >
@@ -55,7 +55,7 @@
               <div
                 class="mt-4 flex md:space-x-2 space-x-3 text-neutral-400 p-3 md:p-0 rounded-xl border md:border-none border-neutral-500"
               >
-                <i class="fa-solid fa-triangle-exclamation text-2xl md:text-md md:my-auto"></i>
+                <i class="fa-solid fa-triangle-exclamation text-2xl md:text-base md:my-auto"></i>
                 <p class="my-auto"
                   >This work is purely fictional, and the story’s characters DO NOT represent any people in real life.</p
                 >
