@@ -13,6 +13,9 @@ export default defineNuxtConfig({
     "@/assets/css/prism.css",
     "@/assets/css/text.css",
     "@/assets/css/transitions.css",
+    "@/assets/fontawesome/css/fontawesome.css",
+    "@/assets/fontawesome/css/brands.css",
+    "@/assets/fontawesome/css/solid.css",
   ],
 
   // https://tailwindcss.nuxtjs.org/getting-started/setup
