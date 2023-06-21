@@ -19,6 +19,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "@fontsource/nunito/400.css",
+    "@fontsource/nunito/700.css",
     "@/assets/css/tailwind.css",
     "@/assets/css/text.css",
     "@/assets/css/transitions.css",

@@ -9,10 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fontsource/gfs-neohellenic": "^4.5.8",
-    "@fontsource/libre-baskerville": "^4.5.10",
-    "@fontsource/open-sans": "^4.5.13",
-    "@fontsource/raleway": "^4.5.11",
+    "@fontsource/nunito": "^5.0.3",
     "@nuxt/content": "^1.15.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",

@@ -945,25 +945,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fontsource/gfs-neohellenic@^4.5.8":
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/gfs-neohellenic/-/gfs-neohellenic-4.5.8.tgz#b9472f139701cffdd88aedce51f7ae30ae7e5992"
-  integrity sha512-TZArNCHpKmXVyLwJdUv8OwyEfFFDKC/GD2EJ4R91MsTYH1OBWqgjKCEr7yu7n+t9wNaTnUK+/+NYF3GldiavjQ==
-
-"@fontsource/libre-baskerville@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.yarnpkg.com/@fontsource/libre-baskerville/-/libre-baskerville-4.5.10.tgz#31a22c5dd38bb70d024ce8c10ab236d68f16a42e"
-  integrity sha512-7dp2TxBSVlINiYe7LEuV/VojQij5oBSRIeS+/mOlCRXRyEKiEvK1y7sH8GlORqGxXYDKCDWtQaiCu1XPNchIKg==
-
-"@fontsource/open-sans@^4.5.13":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.13.tgz#2c99e4c055d129a75f14c11b77d040282e0388b8"
-  integrity sha512-/UzqP7ZFk145XAq8KG4pvFPP7UQhtreDGXgqXZjagCDreKxcrhwn/x7DYz9rPcycWkLUVApIybcoczGZiM0cRg==
-
-"@fontsource/raleway@^4.5.11":
-  version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.11.tgz#6da0bad1f44e0360fe465663ac0683601d29bda7"
-  integrity sha512-WrFuS5q3tPqNci4iDwIf7lnkHY5jrkWswy6B007W//cAB7Iiw2NuxBNxrCetYpe3efPbEoFPcoKeTPqDzoWQ3A==
+"@fontsource/nunito@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.3.tgz#38f84381e72883ac3ed87c093c3bd1194f49de36"
+  integrity sha512-NhWeAgtKjGtcAsZulNzaYFIXuX9SKiUjWE5L4tsrvr/Dfu2vWgnjOwL7GX0tvJ4go1bymwVLuQI27OcxHwMPvQ==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
