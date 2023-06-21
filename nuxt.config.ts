@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: [
+    "@fontsource/raleway/400.css",
+    "@fontsource/raleway/600.css",
+    "@fontsource/raleway/700.css",
+    "@fontsource/merriweather/700.css",
     "@/assets/css/prism.css",
     "@/assets/css/text.css",
     "@/assets/css/transitions.css",
@@ -13,4 +17,9 @@ export default defineNuxtConfig({
 
   // https://tailwindcss.nuxtjs.org/getting-started/setup
   modules: ["@nuxtjs/tailwindcss"],
+
+  // https://tailwindcss.nuxtjs.org/getting-started/options
+  tailwindcss: {
+    configPath: "~/tailwind.config.ts",
+  },
 });
