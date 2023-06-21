@@ -9,7 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fontsource/nunito": "^5.0.3",
+    "@fontsource/merriweather": "^5.0.3",
+    "@fontsource/raleway": "^5.0.3",
     "@nuxt/content": "^1.15.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",

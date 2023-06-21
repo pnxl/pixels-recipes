@@ -945,10 +945,15 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fontsource/nunito@^5.0.3":
+"@fontsource/merriweather@^5.0.3":
   version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.3.tgz#38f84381e72883ac3ed87c093c3bd1194f49de36"
-  integrity sha512-NhWeAgtKjGtcAsZulNzaYFIXuX9SKiUjWE5L4tsrvr/Dfu2vWgnjOwL7GX0tvJ4go1bymwVLuQI27OcxHwMPvQ==
+  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.3.tgz#d13b5de4503296a81ccd7e57f0cb6d3f7ef16470"
+  integrity sha512-iCngvmyUfmWxQwqi3ekD8NIysXresp9L6M9fPJXUgUNWvEHhEXjMYg6RvIiZVexKrlRgtEY1KVt11kh4KFTDYQ==
+
+"@fontsource/raleway@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-5.0.3.tgz#3330d6f2ab132993410e1efe331199d2ff4ce20a"
+  integrity sha512-dmbHSu2cvuQb0Vlp7sOETUSsrmYESwagmK73wb5Lhs+rkM/5aciI0DnNMiarVwEfE5V2bfcn3GgDkILQG5QPWw==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"

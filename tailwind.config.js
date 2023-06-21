@@ -9,8 +9,13 @@ module.exports = {
   ],
   darkMode: "media",
   theme: {
+    extend: {
+      fontFamily: {
+        display: ["Merriweather", "serif"],
+      },
+    },
     fontFamily: {
-      sans: ["Nunito", "sans-serif"],
+      sans: ["Raleway", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography")],
