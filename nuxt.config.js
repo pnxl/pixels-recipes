@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Nadine's journal",
+    title: "Nadine's Journal",
     htmlAttrs: {
       lang: "en",
     },
@@ -19,8 +19,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "@fontsource/nunito/400.css",
-    "@fontsource/nunito/700.css",
+    "@fontsource/raleway/400.css",
+    "@fontsource/raleway/700.css",
+    "@fontsource/merriweather/700.css",
     "@/assets/css/tailwind.css",
     "@/assets/css/text.css",
     "@/assets/css/transitions.css",

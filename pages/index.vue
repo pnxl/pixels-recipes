@@ -110,7 +110,7 @@ export default {
   },
   head() {
     return {
-      title: `Storylines - Nadine's journal`,
+      title: `Storylines - Nadine's Journal`,
     };
   },
 };
