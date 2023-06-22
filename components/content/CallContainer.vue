@@ -4,7 +4,7 @@
   >
     <div class="flex w-full justify-center">
       <div
-        class="flex flex-col md:flex-row dark:bg-neutral-800 bg-neutral-200 p-3 rounded-3xl md:rounded-full w-full lg:w-1/2 shadow-lg justify-between"
+        class="flex flex-col md:flex-row dark:bg-neutral-800 bg-neutral-200 p-3 rounded-full w-full md:w-1/2 shadow-lg justify-between"
       >
         <div class="flex flex-row justify-between w-full">
           <div class="flex gap-x-4">
