@@ -1,15 +1,13 @@
 <template>
   <div
-    class="gap-y-8 flex flex-col py-8 my-8 border-y-2 border-neutral-600"
+    class="gap-y-8 flex flex-col py-8 my-8 border-y-2 dark:border-neutral-600 border-neutral-200"
   >
     <div
       :class="(!platform && !time ? 'hidden' : '') + ' flex flex-col gap-y-1'"
     >
-      <span
-        v-if="platform"
-        class="text-sm text-center text-gray-400"
-        >{{ platform }}</span
-      >
+      <span v-if="platform" class="text-sm text-center text-gray-400">{{
+        platform
+      }}</span>
       <span
         v-if="time"
         class="text-sm text-center font-semibold text-neutral-300"
