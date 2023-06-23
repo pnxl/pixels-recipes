@@ -1,5 +1,5 @@
 ---
-title: Blood Is Thicker Than Champagne.
+title: Blood Is Thicker Than Champagne
 date: 29 April 2023
 ---
 
