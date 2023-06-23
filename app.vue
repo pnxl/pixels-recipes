@@ -75,7 +75,7 @@
         </div>
 
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-[rgb(187,187,187)] md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
           :class="$route.query.story ? 'hidden md:block' : ''"
         >
           <div
