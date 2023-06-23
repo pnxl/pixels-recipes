@@ -4,7 +4,7 @@
       class="flex flex-col bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
     >
       <header
-        class="px-6 py-3 bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-xl"
+        class="px-6 py-3 bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
       >
         <nuxt-link
           to="/"
