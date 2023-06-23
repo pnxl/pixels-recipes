@@ -4,7 +4,7 @@
       class="flex flex-col bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
     >
       <header
-        class="px-6 py-3 bg-neutral-100 hidden md:flex border-b border-neutral-300 dark:bg-neutral-800 dark:border-neutral-700 shadow-xl"
+        class="px-6 py-3 bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-xl"
       >
         <nuxt-link
           to="/"
@@ -21,7 +21,7 @@
 
       <div class="grow flex h-full">
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-[rgb(187,187,187)] md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
           :class="$route.query.series ? 'hidden lg:block' : ''"
         >
           <div class="flex flex-col gap-y-2">
