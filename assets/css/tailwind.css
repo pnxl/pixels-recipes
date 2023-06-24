@@ -5,3 +5,7 @@
 section {
   @apply flex w-full justify-center;
 }
+
+.smoothen {
+  @apply transition duration-[200] ease-in-out;
+}
