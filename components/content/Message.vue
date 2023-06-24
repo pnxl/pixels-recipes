@@ -43,10 +43,10 @@
           :class="
             (!img
               ? alignment === 'right'
-                ? 'mr-11 dark:bg-red-700 bg-red-200 border border-red-300  dark:border-red-500 ml-11'
+                ? 'mr-11 dark:bg-red-900 bg-red-200 border border-red-300  dark:border-red-700 ml-11'
                 : 'ml-11 dark:bg-neutral-700 bg-neutral-200 border border-neutral-300 dark:border-neutral-500 mr-11'
               : alignment === 'right'
-              ? 'dark:bg-red-800 bg-red-200 border border-red-300 dark:border-red-600 ml-11'
+              ? 'dark:bg-red-900 bg-red-200 border border-red-300 dark:border-red-700 ml-11'
               : 'dark:bg-neutral-700 bg-neutral-200 border-neutral-300 dark:border-neutral-500 border mr-11') +
             ' w-fit py-2 px-4 rounded-xl dark:text-neutral-100 my-auto'
           "
