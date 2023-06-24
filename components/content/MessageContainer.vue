@@ -5,7 +5,7 @@
     <div
       :class="(!platform && !time ? 'hidden' : '') + ' flex flex-col gap-y-1'"
     >
-      <span v-if="platform" class="text-sm text-center text-gray-400">{{
+      <span v-if="platform" class="text-sm text-center text-neutral-400">{{
         platform
       }}</span>
       <span
@@ -14,7 +14,9 @@
         >{{ time }}</span
       >
     </div>
-    <slot />
+    <div class="flex gap-y-4 flex-col">
+      <slot />
+    </div>
   </div>
 </template>
 
