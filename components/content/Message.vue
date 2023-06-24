@@ -38,7 +38,7 @@
         >
           <slot />
         </p>
-        <p
+        <div
           v-else
           :class="
             (!img
@@ -52,7 +52,7 @@
           "
         >
           <slot />
-        </p>
+        </div>
         <img
           v-if="img"
           :class="
