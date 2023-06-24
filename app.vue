@@ -382,7 +382,7 @@
             </div>
             <div class="w-full">
               <ContentDoc
-                :path="`/${$route.query.series}/${$route.query.story}`"
+                :path="`/${$route.query.series}/${$route.query.story}.md`"
               >
                 <template #not-found>
                   <div
