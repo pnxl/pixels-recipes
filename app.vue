@@ -79,7 +79,7 @@
           :class="$route.query.story ? 'hidden md:block' : ''"
         >
           <div
-            v-if="$route.query.series === 'oneshots'"
+            v-if="$route.query.series"
             class="flex flex-col gap-y-3 md:gap-y-2"
           >
             <div class="font-semibold lg:hidden">
@@ -94,138 +94,259 @@
                 <span class="my-auto dark:text-red-300">Folders</span>
               </button>
             </div>
-            <p
-              class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
-            >
-              Oneshots
-              <span
-                class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                >— {{ seriesOneshots.length }}
-                {{ seriesOneshots.length > 1 ? "items" : "item" }}</span
+            <div>
+              <p
+                v-if="$route.query.series === 'oneshots'"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
-            </p>
-            <div v-for="{ _path: slug, title, date } in seriesOneshots">
-              <div
-                v-if="
-                  $route.query.story ===
-                  slug.replaceAll('/', '').replace('oneshots', '')
-                "
-                class="w-full no-underline"
-              >
-                <div
-                  class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
+                Oneshots
+                <span
+                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  >— {{ seriesOneshots.length }}
+                  {{ seriesOneshots.length > 1 ? "items" : "item" }}</span
                 >
-                  <p
-                    class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
-                  >
-                    {{ title }}
-                  </p>
-                  <span
-                    class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
-                  >
-                    {{ date }}
-                  </span>
-                </div>
-              </div>
-              <nuxt-link
-                v-else
-                :key="slug"
-                :to="`?series=oneshots&story=${slug
-                  .replaceAll('/', '')
-                  .replace('oneshots', '')}`"
-                class="w-full no-underline"
+              </p>
+
+              <p
+                v-else-if="$route.query.series === 'is-it-murder'"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
-                <div
-                  class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                Is It Murder?
+                <span
+                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  >— {{ seriesIsItMurder.length }}
+                  {{ seriesIsItMurder.length > 1 ? "items" : "item" }}</span
                 >
-                  <p
-                    class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
-                  >
-                    {{ title }}
-                  </p>
-                  <span
-                    class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
-                  >
-                    {{ date }}
-                  </span>
-                </div>
-              </nuxt-link>
+              </p>
+
+              <p
+                v-else-if="$route.query.series === 'dinners-ready'"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+              >
+                Dinner’s Ready!
+                <span
+                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  >— {{ seriesDinnersReady.length }}
+                  {{ seriesDinnersReady.length > 1 ? "items" : "item" }}</span
+                >
+              </p>
+
+              <p
+                v-else-if="$route.query.series === 'promised'"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+              >
+                Promised.
+                <span
+                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  >— {{ seriesPromised.length }}
+                  {{ seriesPromised.length > 1 ? "items" : "item" }}</span
+                >
+              </p>
             </div>
-          </div>
-          <div
-            v-else-if="$route.query.series === 'is-it-murder'"
-            class="flex flex-col gap-y-3 md:gap-y-2"
-          >
-            <div class="font-semibold lg:hidden">
-              <button
-                v-if="$route.query.series"
-                class="flex flex-row gap-x-1 lg:hidden"
-                @click="$router.push('/')"
-              >
-                <i
-                  class="fa-solid fa-chevron-left my-auto dark:text-red-300 text-red-700"
-                ></i>
-                <span class="my-auto dark:text-red-300 text-red-700"
-                  >Folders</span
-                >
-              </button>
-            </div>
-            <p
-              class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
-            >
-              Is It Murder?
-              <span
-                class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                >— {{ seriesIsItMurder.length }}
-                {{ seriesIsItMurder.length > 1 ? "items" : "item" }}</span
-              >
-            </p>
-            <div v-for="{ _path: slug, title, date } in seriesIsItMurder">
+            <div class="flex flex-col gap-y-2">
               <div
-                v-if="
-                  $route.query.story ===
-                  slug.replaceAll('/', '').replace('is-it-murder', '')
-                "
-                class="w-full no-underline"
+                v-if="$route.query.series === 'oneshots'"
+                v-for="{ _path: slug, title, date } in seriesOneshots"
               >
                 <div
-                  class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
+                  v-if="
+                    $route.query.story ===
+                    slug.replaceAll('/', '').replace('oneshots', '')
+                  "
+                  class="w-full no-underline"
                 >
-                  <p
-                    class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                  <div
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
                   >
-                    {{ title }}
-                  </p>
-                  <span
-                    class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
-                  >
-                    {{ date }}
-                  </span>
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
                 </div>
+                <nuxt-link
+                  v-else
+                  :key="slug"
+                  :to="`?series=oneshots&story=${slug
+                    .replaceAll('/', '')
+                    .replace('oneshots', '')}`"
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </nuxt-link>
               </div>
-              <nuxt-link
-                v-else
-                :key="slug"
-                :to="`?series=is-it-murder&story=${slug
-                  .replaceAll('/', '')
-                  .replace('is-it-murder', '')}`"
-                class="w-full no-underline"
+
+              <div
+                v-else-if="$route.query.series === 'is-it-murder'"
+                v-for="{ _path: slug, title, date } in seriesIsItMurder"
               >
                 <div
-                  class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                  v-if="
+                    $route.query.story ===
+                    slug.replaceAll('/', '').replace('is-it-murder', '')
+                  "
+                  class="w-full no-underline"
                 >
-                  <p
-                    class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                  <div
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
                   >
-                    {{ title }}
-                  </p>
-                  <span
-                    class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
-                  >
-                    {{ date }}
-                  </span>
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
                 </div>
-              </nuxt-link>
+                <nuxt-link
+                  v-else
+                  :key="slug"
+                  :to="`?series=is-it-murder&story=${slug
+                    .replaceAll('/', '')
+                    .replace('is-it-murder', '')}`"
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </nuxt-link>
+              </div>
+
+              <div
+                v-else-if="$route.query.series === 'dinners-ready'"
+                v-for="{ _path: slug, title, date } in seriesDinnersReady"
+              >
+                <div
+                  v-if="
+                    $route.query.story ===
+                    slug.replaceAll('/', '').replace('dinners-ready', '')
+                  "
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </div>
+                <nuxt-link
+                  v-else
+                  :key="slug"
+                  :to="`?series=dinners-ready&story=${slug
+                    .replaceAll('/', '')
+                    .replace('dinners-ready', '')}`"
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </nuxt-link>
+              </div>
+
+              <div
+                v-else-if="$route.query.series === 'promised'"
+                v-for="{ _path: slug, title, date } in seriesPromised"
+              >
+                <div
+                  v-if="
+                    $route.query.story ===
+                    slug.replaceAll('/', '').replace('promised', '')
+                  "
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </div>
+                <nuxt-link
+                  v-else
+                  :key="slug"
+                  :to="`?series=promised&story=${slug
+                    .replaceAll('/', '')
+                    .replace('promised', '')}`"
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ date }}
+                    </span>
+                  </div>
+                </nuxt-link>
+              </div>
             </div>
           </div>
           <div v-else class="mt-8 mx-5 flex flex-row gap-x-4">
@@ -332,7 +453,11 @@
     </div>
     <ClientOnly>
       <TransitionRoot appear :show="dialogOpen" as="template">
-        <Dialog as="div" @close="setDialogCloseNoAccept()" class="relative z-10">
+        <Dialog
+          as="div"
+          @close="setDialogCloseNoAccept()"
+          class="relative z-10"
+        >
           <TransitionChild
             as="template"
             enter="duration-300 ease-out"
@@ -419,6 +544,8 @@ import {
 
 const seriesOneshots = await queryContent("/oneshots").find();
 const seriesIsItMurder = await queryContent("/is-it-murder").find();
+const seriesDinnersReady = await queryContent("/dinners-ready").find();
+const seriesPromised = await queryContent("/promised").find();
 
 const seriesList = await queryContent("/_series").find();
 
@@ -437,6 +564,5 @@ function setDialogClose() {
   localStorage.setItem("agree", JSON.stringify(true));
 }
 
-function setDialogCloseNoAccept() {
-}
+function setDialogCloseNoAccept() {}
 </script>
