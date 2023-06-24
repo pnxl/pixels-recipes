@@ -332,7 +332,7 @@
     </div>
     <ClientOnly>
       <TransitionRoot appear :show="dialogOpen" as="template">
-        <Dialog as="div" @close="setDialogClose()" class="relative z-10">
+        <Dialog as="div" @close="setDialogCloseNoAccept()" class="relative z-10">
           <TransitionChild
             as="template"
             enter="duration-300 ease-out"
@@ -435,5 +435,8 @@ function checkAgreed() {
 function setDialogClose() {
   dialogOpen.value = false;
   localStorage.setItem("agree", JSON.stringify(true));
+}
+
+function setDialogCloseNoAccept() {
 }
 </script>
