@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div v-if="this.$nuxt.$route.path.startsWith('/promised/')">
+    <div>
       <div>
         {{ msgBefore }}
-        <span class="bg-[#412B1D] border-[#412B1D] px-1 rounded-lg"
+        <span
+          class="dark:bg-red-600 dark:border-red-500 bg-red-300 border-red-400 border dark:bg-opacity-75 px-1 py-[0.125rem] rounded-lg"
           >@{{ user }}</span
         >
         {{ msgAfter }}
       </div>
     </div>
-    <div v-else>WIP</div>
   </div>
 </template>
 
