@@ -10,11 +10,11 @@ Jason sat down in his usual seat in class, waiting for the professor to begin. H
 Despite attending different universities in Jakarta, they remained in touch. Evan studied Physics at Binawan University, while Nadine pursued Graphic Design at UMN.
 
 <message-container platform="Signal" time="08:57 am">
-<message contact="Evan" alignment="left" img="./assets/content/promised/evan.png">my prof is just discussing about GLB and GLBB like sir bas in 8th grade lol</message>
-<message contact="Nadine" alignment="left" img="./assets/content/promised/nadine.png">
+<message contact="Evan" alignment="left" img="/content/promised/evan.png">my prof is just discussing about GLB and GLBB like sir bas in 8th grade lol</message>
+<message contact="Nadine" alignment="left" img="/content/promised/nadine.png">
 Van why did you even pursue physics its basically middle school abuse, bio or chem is a thousand times better and less abusive to the adolescent mind.
 </message>
-<message contact="Jason" alignment="right" img="./assets/content/promised/jason.png">
+<message contact="Jason" alignment="right" img="/content/promised/jason.png">
 okok both of you just shut up my prof is abt to start the lecture.
 </message>
 <message alignment="right">

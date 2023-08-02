@@ -14,9 +14,9 @@ The lights weren’t on, and a cracked phone kept buzzing non-stop on the floor,
 
 “Sam” the white text showed. Chandra kept shaking, slowly pressing the pick up call button.
 
-<call-container icon="mobile-screen-button" platform="iPhone (Cellular)" contact="Sam" duration="02:27" img="./assets/content/oneshots/stray-pills/sam.png" transcribe-start="09:47 pm" transcribe-end="09:49 pm">
-<message contact="Chandra" alignment="right" img="./assets/content/oneshots/stray-pills/chandra.png">H-Hello?</message>
-<message contact="Sam" alignment="left" img="./assets/content/oneshots/stray-pills/sam.png">Chan, where the actual fuck are you?</message>
+<call-container icon="mobile-screen-button" platform="iPhone (Cellular)" contact="Sam" duration="02:27" img="/content/oneshots/stray-pills/sam.png" transcribe-start="09:47 pm" transcribe-end="09:49 pm">
+<message contact="Chandra" alignment="right" img="/content/oneshots/stray-pills/chandra.png">H-Hello?</message>
+<message contact="Sam" alignment="left" img="/content/oneshots/stray-pills/sam.png">Chan, where the actual fuck are you?</message>
 <message>You better have not passed out again.</message>
 <message>Why didn’t you pick up my 20 missed calls?</message>
 <message>Ellie, CaCa and I have been here for almost an hour and we have to get home by 10.</message>

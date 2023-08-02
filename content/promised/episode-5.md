@@ -18,23 +18,23 @@ It’s been almost 3 weeks since Jason and Cinta reunited, and every single day 
 Tonight was their first proper dinner together, which made Jason feel a mix of anxiety and joy.
 
 <message-container  platform="WhatsApp" time="08:39 am">
-<message contact="Jason" alignment="right" img="./assets/content/promised/jason.png">im still not quite sure about this dinner thing</message>
+<message contact="Jason" alignment="right" img="/content/promised/jason.png">im still not quite sure about this dinner thing</message>
 <message alignment="right">
 brooo im worried ill say the wrong thing or make a mistake and scare her off or smth</message>
-<message contact="Jovan" alignment="left" img="./assets/content/promised/jovan.jpg">
+<message contact="Jovan" alignment="left" img="/content/promised/jovan.jpg">
 you’ve hung out with her multiple times, why are you scared now?
 </message>
-<message contact="Jason" alignment="right" img="./assets/content/promised/jason.png">
+<message contact="Jason" alignment="right" img="/content/promised/jason.png">
 idk its just this dinner is actually serious and won’t be filled with shits and giggles like the usual study sessions</message>
-<message contact="Jovan" alignment="left" img="./assets/content/promised/jovan.jpg">
+<message contact="Jovan" alignment="left" img="/content/promised/jovan.jpg">
 don’t worry too much, you’re a great person
 </message>
 <message alignment="left">
 maybe if you’re brave enough, ypu can ask her to be your gf and mention the promise 😏
 </message>
-<message contact="Jason" alignment="right" img="./assets/content/promised/jason.png">
+<message contact="Jason" alignment="right" img="/content/promised/jason.png">
 bro stfu</message>
-<message contact="Jovan" alignment="left" img="./assets/content/promised/jovan.jpg">
+<message contact="Jovan" alignment="left" img="/content/promised/jovan.jpg">
 lmao
 </message>
 <message alignment="left">
