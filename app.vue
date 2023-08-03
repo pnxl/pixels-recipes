@@ -179,7 +179,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -187,7 +187,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline group-hover:text-neutral-400 text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -230,7 +230,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -238,7 +238,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -281,7 +281,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -289,7 +289,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -332,7 +332,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg group md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -340,7 +340,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
