@@ -402,6 +402,12 @@
                   </div></template
                 >
                 <template v-slot="{ doc }">
+                  <div class="p-4 pb-0" v-if="doc.img">
+                    <img
+                      :src="doc.img"
+                      class="justify-center rounded-lg w-screen aspect-[3/1] object-cover md:flex dark:text-neutral-400 text-neutral-600 text-sm"
+                    />
+                  </div>
                   <span
                     class="justify-center hidden md:flex mt-2 dark:text-neutral-400 text-neutral-600 text-sm"
                     >{{ doc.date }}</span
