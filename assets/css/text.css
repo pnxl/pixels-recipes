@@ -5,3 +5,8 @@ a {
 * {
   @apply text-neutral-900 dark:text-neutral-100 selection:bg-red-400 selection:text-white;
 }
+
+html {
+  @apply bg-neutral-900;
+  color-scheme: dark;
+}
