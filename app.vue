@@ -36,17 +36,31 @@
             >
             <div class="flex flex-col gap-y-2 md:gap-y-1">
               <div v-for="{ _path: url, title } in seriesList">
-                <div
-                  v-if="$route.query.series === url.slice(9)"
-                  class="flex flex-row gap-x-2 dark:bg-red-900 bg-red-200 smoothen px-2 py-1 rounded-md no-underline"
-                >
-                  <i
-                    class="fa-solid fa-folder my-auto text-neutral-700 dark:text-neutral-200"
-                  ></i
-                  ><span
-                    class="my-auto text-neutral-700 dark:text-neutral-200"
-                    >{{ title }}</span
+                <div v-if="$route.query.series === url.slice(9)">
+                  <div
+                    v-if="$route.query.story"
+                    class="flex flex-row gap-x-2 dark:bg-neutral-700 bg-neutral-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
+                    <i
+                      class="fa-solid fa-folder my-auto text-red-500 dark:text-red-400"
+                    ></i
+                    ><span
+                      class="my-auto text-neutral-700 dark:text-neutral-200"
+                      >{{ title }}</span
+                    >
+                  </div>
+                  <div
+                    v-else
+                    class="flex flex-row gap-x-2 dark:bg-red-900 bg-red-200 smoothen px-2 py-1 rounded-md no-underline"
+                  >
+                    <i
+                      class="fa-solid fa-folder my-auto text-neutral-700 dark:text-neutral-200"
+                    ></i
+                    ><span
+                      class="my-auto text-neutral-700 dark:text-neutral-200"
+                      >{{ title }}</span
+                    >
+                  </div>
                 </div>
                 <nuxt-link
                   v-else
