@@ -1,10 +1,81 @@
 <template>
   <div>
     <div
-      class="flex flex-col bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
+      class="flex flex-col relative bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
     >
+      <Menu
+        as="div"
+        class="absolute top-0 right-[0.375rem] h-14 flex flex-col justify-center"
+      >
+        <div class="group">
+          <MenuButton
+            class="dark:hover:bg-neutral-700 hover:bg-neutral-200 transition py-2 px-[0.625rem] rounded-lg"
+          >
+            <i
+              class="fa-solid fa-share-from-square my-auto dark:text-neutral-300 text-neutral-600"
+            ></i>
+          </MenuButton>
+        </div>
+
+        <transition
+          enter-active-class="transition duration-100 ease-out"
+          enter-from-class="transform scale-95 opacity-0"
+          enter-to-class="transform scale-100 opacity-100"
+          leave-active-class="transition duration-75 ease-in"
+          leave-from-class="transform scale-100 opacity-100"
+          leave-to-class="transform scale-95 opacity-0"
+        >
+          <MenuItems
+            class="absolute right-0 top-0 mt-2 w-64 divide-y rounded-lg dark:bg-neutral-800 border dark:border-neutral-700 border-neutral-200 bg-neutral-100 shadow-lg"
+          >
+            <div class="p-3 flex flex-col">
+              <div
+                class="inline-flex gap-x-2 border-b w-full pb-3 mb-3 border-neutral-500"
+              >
+                <img src="@/static/icon.png" class="h-8 w-8 my-auto" />
+                <div class="flex flex-col">
+                  <h1
+                    class="my-auto font-bold font-display dark:text-neutral-300 text-neutral-700 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 smoothen"
+                  >
+                    Nadine’s Journal
+                  </h1>
+                  <span
+                    class="my-auto text-sm text-neutral-600 dark:text-neutral-400 smoothen"
+                  >
+                    nadines-journal.pnxl.dev
+                  </span>
+                </div>
+              </div>
+              <MenuItem>
+                <a
+                  :href="`mailto:?subject=I found a cool story!&amp;body=Check out this cool story I found on Nadine's Journal! https://nadines-journal.pnxl.dev${$nuxt.$route.fullPath}`"
+                  class="flex w-full items-center group rounded-md px-2 py-1 gap-x-2 no-underline transition hover:text-neutral-900 dark:hover:bg-neutral-700 hover:bg-neutral-200 text-neutral-900"
+                >
+                  <i
+                    class="fa-solid fa-envelope my-auto text-lg text-blue-400 dark:group-hover:text-neutral-100 group-hover:text-neutral-900 transition"
+                  ></i>
+                  <p class="my-auto">Email</p>
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  target="_blank"
+                  :href="`https://api.whatsapp.com/send/?text=Check out this cool story I found on Nadine\'s Journal! https://nadines-journal.pnxl.dev${$nuxt.$route.fullPath}`"
+                  class="flex w-full items-center group rounded-md px-2 py-1 gap-x-2 no-underline transition hover:text-neutral-900 dark:hover:bg-neutral-700 hover:bg-neutral-200 text-neutral-900"
+                >
+                  <i
+                    class="fa-brands fa-whatsapp my-auto text-lg text-green-400 dark:group-hover:text-neutral-100 group-hover:text-neutral-900 transition"
+                  ></i>
+                  <p class="my-auto">WhatsApp</p>
+                </a>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </transition>
+      </Menu>
+
       <header
-        class="px-6 py-3 bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
+        class="px-6 py-3 justify-between bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
       >
         <nuxt-link
           to="/"
@@ -201,7 +272,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline group-hover:text-neutral-400 text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -252,7 +323,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -303,7 +374,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -354,7 +425,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 group-hover:text-neutral-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ date }}
                     </span>
@@ -560,6 +631,10 @@ import {
   Dialog,
   DialogPanel,
   DialogTitle,
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
 } from "@headlessui/vue";
 
 const seriesOneshots = await queryContent("/oneshots").find();
