@@ -487,16 +487,19 @@
                   </div></template
                 >
                 <template v-slot="{ doc }">
+                  <span
+                    :class="
+                      (doc.img ? 'pb-2' : '',
+                      'justify-center hidden md:flex mt-2 dark:text-neutral-400 text-neutral-600 text-sm')
+                    "
+                    >{{ doc.date }}</span
+                  >
                   <div class="p-4 pb-0" v-if="doc.img">
                     <img
                       :src="doc.img"
                       class="justify-center rounded-lg w-screen aspect-[3/1] object-cover md:flex dark:text-neutral-400 text-neutral-600 text-sm"
                     />
                   </div>
-                  <span
-                    class="justify-center hidden md:flex mt-2 dark:text-neutral-400 text-neutral-600 text-sm"
-                    >{{ doc.date }}</span
-                  >
                   <div class="md:p-8 p-6 pt-4 min-w-full">
                     <h1
                       class="font-display font-bold text-3xl dark:text-neutral-300 text-neutral-800"
