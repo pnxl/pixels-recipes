@@ -4,7 +4,7 @@
   >
     <div class="flex w-full justify-center">
       <div
-        class="flex flex-col md:flex-row dark:bg-neutral-800 bg-neutral-200 p-3 rounded-full w-full md:w-1/2 shadow-lg justify-between"
+        class="flex flex-col sm:flex-row dark:bg-neutral-800 bg-neutral-200 p-3 rounded-xl sm:rounded-full w-full sm:w-[7/8] lg:w-3/4 shadow-lg justify-between"
       >
         <div class="flex flex-row justify-between w-full">
           <div class="flex gap-x-4">
@@ -23,6 +23,22 @@
                 >{{ contact }} — {{ duration }}</strong
               >
             </div>
+          </div>
+          <div class="hidden sm:flex gap-x-4">
+            <button
+              class="h-14 w-14 rounded-full my-auto m-0 dark:bg-neutral-700 dark:hover:bg-neutral-600 transition group duration-300 bg-neutral-300 hover:bg-neutral-400"
+            >
+              <i
+                class="fa-solid fa-volume-high text-2xl mt-[0.375rem] transition duration-300 text-neutral-700 dark:group-hover:text-neutral-100 group-hover:text-neutral-900 dark:text-neutral-100"
+              ></i>
+            </button>
+            <button
+              class="h-14 w-14 rounded-full my-auto m-0 dark:bg-red-600 dark:hover:bg-red-500 transition duration-300 bg-red-500 hover:bg-red-600"
+            >
+              <i
+                class="fa-solid fa-phone text-2xl mt-[0.375rem] text-neutral-100"
+              ></i>
+            </button>
           </div>
         </div>
       </div>
