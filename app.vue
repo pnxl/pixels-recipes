@@ -5,7 +5,7 @@
     >
       <Menu
         as="div"
-        class="absolute top-0 right-2 h-14 flex flex-col justify-center"
+        class="absolute hidden top-0 right-2 h-14 md:flex flex-col justify-center"
       >
         <div class="group">
           <MenuButton
