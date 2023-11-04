@@ -33,7 +33,7 @@
               ></i>
             </button>
             <button
-              class="h-14 w-14 rounded-full my-auto m-0 dark:bg-red-600 dark:hover:bg-red-500 transition duration-300 bg-red-500 hover:bg-red-600"
+              class="h-14 w-14 rounded-full my-auto m-0 dark:bg-indigo-600 dark:hover:bg-indigo-500 transition duration-300 bg-indigo-500 hover:bg-indigo-600"
             >
               <i
                 class="fa-solid fa-phone text-2xl mt-[0.375rem] text-gray-100"

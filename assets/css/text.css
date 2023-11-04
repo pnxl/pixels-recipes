@@ -1,9 +1,9 @@
 a {
-  @apply transition hover:text-red-300 text-red-400;
+  @apply transition hover:text-indigo-300 text-indigo-400;
 }
 
 * {
-  @apply text-gray-900 dark:text-gray-100 selection:bg-red-400 selection:text-white;
+  @apply text-gray-900 dark:text-gray-100 selection:bg-indigo-400 selection:text-white;
 }
 
 html {

@@ -42,10 +42,10 @@
           :class="
             (!img
               ? alignment === 'right'
-                ? 'mr-11 dark:bg-red-900 bg-red-200 border border-red-300  dark:border-red-700 ml-11'
+                ? 'mr-11 dark:bg-indigo-900 bg-indigo-200 border border-indigo-300  dark:border-indigo-700 ml-11'
                 : 'ml-11 dark:bg-gray-700 bg-gray-200 border border-gray-300 dark:border-gray-500 mr-11'
               : alignment === 'right'
-              ? 'dark:bg-red-900 bg-red-200 border border-red-300 dark:border-red-700 ml-11'
+              ? 'dark:bg-indigo-900 bg-indigo-200 border border-indigo-300 dark:border-indigo-700 ml-11'
               : 'dark:bg-gray-700 bg-gray-200 border-gray-300 dark:border-gray-500 border mr-11') +
             ' w-fit py-2 px-4 rounded-xl dark:text-gray-100 my-auto'
           "
