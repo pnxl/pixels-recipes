@@ -9,7 +9,7 @@
         v-if="contact"
         :class="
           (alignment === 'right' ? 'pr-12 pl-2 text-right' : 'pl-12 pr-2') +
-          '  text-neutral-500 text-sm mt-1'
+          '  text-gray-500 text-sm mt-1'
         "
       >
         {{ contact }}
@@ -32,8 +32,7 @@
                 : 'ml-12 mr-12'
               : alignment === 'right'
               ? 'ml-12'
-              : 'mr-12') +
-            ' w-fit text-5xl rounded-xl text-neutral-100 my-auto '
+              : 'mr-12') + ' w-fit text-5xl rounded-xl text-gray-100 my-auto '
           "
         >
           <slot />
@@ -44,11 +43,11 @@
             (!img
               ? alignment === 'right'
                 ? 'mr-11 dark:bg-red-900 bg-red-200 border border-red-300  dark:border-red-700 ml-11'
-                : 'ml-11 dark:bg-neutral-700 bg-neutral-200 border border-neutral-300 dark:border-neutral-500 mr-11'
+                : 'ml-11 dark:bg-gray-700 bg-gray-200 border border-gray-300 dark:border-gray-500 mr-11'
               : alignment === 'right'
               ? 'dark:bg-red-900 bg-red-200 border border-red-300 dark:border-red-700 ml-11'
-              : 'dark:bg-neutral-700 bg-neutral-200 border-neutral-300 dark:border-neutral-500 border mr-11') +
-            ' w-fit py-2 px-4 rounded-xl dark:text-neutral-100 my-auto'
+              : 'dark:bg-gray-700 bg-gray-200 border-gray-300 dark:border-gray-500 border mr-11') +
+            ' w-fit py-2 px-4 rounded-xl dark:text-gray-100 my-auto'
           "
         >
           <slot />

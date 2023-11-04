@@ -1,10 +1,10 @@
 <template>
   <div>
     <div
-      class="flex flex-col relative bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
+      class="flex flex-col relative bg-gray-50 dark:bg-gray-900 h-screen overflow-hidden"
     >
       <header
-        class="px-6 py-3 justify-between fixed top-0 w-full bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
+        class="px-6 py-3 justify-between fixed top-0 w-full bg-gray-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-gray-800 dark:border-gray-700 shadow-lg"
       >
         <nuxt-link
           to="/"
@@ -12,7 +12,7 @@
         >
           <img src="@/static/icon.png" class="h-8 w-8 my-auto" />
           <h1
-            class="my-auto font-bold dark:text-neutral-300 text-neutral-700 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 smoothen"
+            class="my-auto font-bold dark:text-gray-300 text-gray-700 group-hover:text-gray-900 dark:group-hover:text-gray-100 smoothen"
           >
             Pixel’s Recipes
           </h1>
@@ -21,17 +21,17 @@
 
       <div class="grow flex h-full md:pt-14">
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-gray-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
           :class="$route.query.recipes ? 'hidden lg:block' : ''"
         >
           <div class="flex flex-col gap-y-2">
             <p
-              class="mb-1 dark:text-neutral-300 mt-10 text-neutral-800 text-3xl font-bold md:hidden"
+              class="mb-1 dark:text-gray-300 mt-10 text-gray-800 text-3xl font-bold md:hidden"
             >
               Categories
             </p>
             <span
-              class="md:text-sm font-semibold md:font-normal ml-4 md:ml-2 md:dark:text-neutral-400 md:text-neutral-500"
+              class="md:text-sm font-semibold md:font-normal ml-4 md:ml-2 md:dark:text-gray-400 md:text-gray-500"
               >Recipes</span
             >
             <div class="flex flex-col gap-y-2 md:gap-y-1">
@@ -39,47 +39,44 @@
                 <div v-if="$route.query.recipes === url.slice(10)">
                   <div
                     v-if="$route.query.card"
-                    class="flex flex-row gap-x-2 dark:bg-neutral-700 bg-neutral-200 smoothen px-2 py-1 rounded-md no-underline"
+                    class="flex flex-row gap-x-2 dark:bg-gray-700 bg-gray-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
                     <i
                       class="fa-solid fa-folder my-auto text-red-500 dark:text-red-400"
                     ></i
-                    ><span
-                      class="my-auto text-neutral-700 dark:text-neutral-200"
-                      >{{ title }}</span
-                    >
+                    ><span class="my-auto text-gray-700 dark:text-gray-200">{{
+                      title
+                    }}</span>
                   </div>
                   <div
                     v-else
                     class="flex flex-row gap-x-2 dark:bg-red-900 bg-red-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
                     <i
-                      class="fa-solid fa-folder my-auto text-neutral-700 dark:text-neutral-200"
+                      class="fa-solid fa-folder my-auto text-gray-700 dark:text-gray-200"
                     ></i
-                    ><span
-                      class="my-auto text-neutral-700 dark:text-neutral-200"
-                      >{{ title }}</span
-                    >
+                    ><span class="my-auto text-gray-700 dark:text-gray-200">{{
+                      title
+                    }}</span>
                   </div>
                 </div>
                 <nuxt-link
                   v-else
                   :to="`?recipes=${url.slice(10)}`"
-                  class="flex flex-row justify-between md:justify-start gap-x-2 md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen md:px-2 md:py-1 px-4 py-2 rounded-md no-underline"
+                  class="flex flex-row justify-between md:justify-start gap-x-2 md:bg-transparent dark:bg-gray-700 bg-gray-200 dark:bg-opacity-30 dark:hover:bg-gray-700 hover:bg-gray-300 smoothen md:px-2 md:py-1 px-4 py-2 rounded-md no-underline"
                 >
                   <div class="flex flex-row gap-x-2">
                     <i
-                      class="fa-solid fa-folder my-auto text-neutral-700 dark:text-neutral-200"
+                      class="fa-solid fa-folder my-auto text-gray-700 dark:text-gray-200"
                     ></i
-                    ><span
-                      class="my-auto text-neutral-700 dark:text-neutral-200"
-                      >{{ title }}</span
-                    >
+                    ><span class="my-auto text-gray-700 dark:text-gray-200">{{
+                      title
+                    }}</span>
                   </div>
 
                   <div class="md:hidden flex-row gap-x-2 flex">
                     <i
-                      class="fa-solid fa-chevron-right my-auto text-neutral-500 dark:text-neutral-400"
+                      class="fa-solid fa-chevron-right my-auto text-gray-500 dark:text-gray-400"
                     ></i>
                   </div>
                 </nuxt-link>
@@ -89,7 +86,7 @@
         </div>
 
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-gray-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
           :class="$route.query.card ? 'hidden md:block' : ''"
         >
           <div
@@ -111,11 +108,11 @@
             <div>
               <p
                 v-if="$route.query.recipes === 'complete-meals'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-gray-300 text-gray-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-gray-400 md:text-gray-500"
               >
                 Complete Meals
                 <span
-                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  class="text-sm hidden md:inline-block dark:text-gray-400 text-gray-500"
                   >— {{ recipesCompleteMeals.length }}
                   {{ recipesCompleteMeals.length > 1 ? "items" : "item" }}</span
                 >
@@ -123,11 +120,11 @@
 
               <p
                 v-else-if="$route.query.recipes === 'side-dishes'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-gray-300 text-gray-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-gray-400 md:text-gray-500"
               >
                 Side Dishes
                 <span
-                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
+                  class="text-sm hidden md:inline-block dark:text-gray-400 text-gray-500"
                   >— {{ recipesSideDishes.length }}
                   {{ recipesSideDishes.length > 1 ? "items" : "item" }}</span
                 >
@@ -149,12 +146,12 @@
                     class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
                   >
                     <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-gray-700 dark:text-gray-100 font-semibold"
                     >
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-gray-600 dark:text-gray-300 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ description }}
                     </span>
@@ -169,7 +166,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-gray-700 bg-gray-200 dark:bg-opacity-30 dark:hover:bg-gray-700 hover:bg-gray-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -177,7 +174,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-gray-500 dark:group-hover:text-gray-400 group-hover:text-gray-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ description }}
                     </span>
@@ -204,12 +201,12 @@
                     class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
                   >
                     <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-gray-700 dark:text-gray-100 font-semibold"
                     >
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-gray-600 dark:text-gray-300 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ description }}
                     </span>
@@ -224,7 +221,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-gray-700 bg-gray-200 dark:bg-opacity-30 dark:hover:bg-gray-700 hover:bg-gray-300 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
@@ -232,7 +229,7 @@
                       {{ title }}
                     </p>
                     <span
-                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
+                      class="text-sm no-underline text-gray-500 dark:group-hover:text-gray-400 group-hover:text-gray-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
                       {{ description }}
                     </span>
@@ -293,43 +290,43 @@
                   <span
                     :class="
                       (doc.img ? 'pb-2' : '',
-                      'justify-center hidden md:flex mt-2 dark:text-neutral-400 text-neutral-600 text-sm')
+                      'justify-center hidden md:flex mt-2 dark:text-gray-400 text-gray-600 text-sm')
                     "
                     >{{ doc.description }}</span
                   >
                   <div class="p-4 pb-0" v-if="doc.img">
                     <img
                       :src="doc.img"
-                      class="justify-center rounded-lg w-screen aspect-[3/1] object-cover md:flex dark:text-neutral-400 text-neutral-600 text-sm"
+                      class="justify-center rounded-lg w-screen aspect-[3/1] object-cover md:flex dark:text-gray-400 text-gray-600 text-sm"
                     />
                   </div>
                   <div class="md:p-8 p-6 pt-4 min-w-full">
                     <h1
-                      class="font-bold text-3xl dark:text-neutral-300 text-neutral-800"
+                      class="font-bold text-3xl dark:text-gray-300 text-gray-800"
                     >
                       {{ doc.title }}
                     </h1>
 
                     <div
                       v-if="doc.description"
-                      class="mt-2 md:hidden dark:text-neutral-300 text-neutral-700 flex gap-x-3"
+                      class="mt-2 md:hidden dark:text-gray-300 text-gray-700 flex gap-x-3"
                     >
                       <i
-                        class="fa-solid fa-calendar dark:text-neutral-400 text-neutral-600 mt-[0.375rem]"
+                        class="fa-solid fa-calendar dark:text-gray-400 text-gray-600 mt-[0.375rem]"
                       ></i>
                       <span
-                        class="justify-center w-full dark:text-neutral-400 text-neutral-600 my-auto"
+                        class="justify-center w-full dark:text-gray-400 text-gray-600 my-auto"
                         >{{ doc.description }}</span
                       >
                     </div>
                     <div
                       v-if="doc.song"
-                      class="dark:text-neutral-300 mt-2 text-neutral-700 flex gap-x-3"
+                      class="dark:text-gray-300 mt-2 text-gray-700 flex gap-x-3"
                     >
                       <i
-                        class="fa-solid fa-music dark:text-neutral-400 text-neutral-600 mt-[0.375rem]"
+                        class="fa-solid fa-music dark:text-gray-400 text-gray-600 mt-[0.375rem]"
                       ></i>
-                      <p class="dark:text-neutral-400 text-neutral-600">
+                      <p class="dark:text-gray-400 text-gray-600">
                         The author suggests you to listen to
                         <a :href="doc.song[1]">{{ doc.song[0] }}</a> while
                         reading this story.
@@ -337,7 +334,7 @@
                     </div>
                     <ContentRenderer
                       :value="doc"
-                      class="prose mt-6 min-w-full prose-invert prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-neutral-500 prose-code:before:content-none prose-code:after:content-none"
+                      class="prose mt-6 min-w-full prose-invert prose-h2:text-xl prose-h3:text-xl prose-h4:text-xl prose-a:underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
                     >
                     </ContentRenderer>
                   </div>
@@ -381,27 +378,27 @@
                 leave-to="opacity-0 scale-95"
               >
                 <DialogPanel
-                  class="w-full max-w-md transform overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 p-6 text-left align-middle shadow-xl transition-all"
+                  class="w-full max-w-md transform overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-900 p-6 text-left align-middle shadow-xl transition-all"
                 >
                   <DialogTitle
                     as="h3"
-                    class="text-lg font-semibold leading-6 text-neutral-900 dark:text-neutral-100"
+                    class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100"
                   >
                     Important Disclaimer
                   </DialogTitle>
                   <div class="mt-4 flex flex-col gap-y-4">
-                    <p class="text-neutral-700 dark:text-neutral-300">
+                    <p class="text-gray-700 dark:text-gray-300">
                       The work that can be found here are all purely fictional
                       and does not depict any real-life individuals or events.
                       Any similarities to actual persons, living or deceased, or
                       to real-life situations are purely coincidental.
                     </p>
-                    <p class="text-neutral-700 dark:text-neutral-300">
+                    <p class="text-gray-700 dark:text-gray-300">
                       The characters, names, and incidents in this story are
                       products of the author's imagination and have been created
                       for artistic purposes.
                     </p>
-                    <p class="text-neutral-700 dark:text-neutral-300">
+                    <p class="text-gray-700 dark:text-gray-300">
                       All rights to this fictional work are reserved, and
                       unauthorized reproduction, distribution, or adaptation is
                       prohibited without written permission.
@@ -412,7 +409,7 @@
                     <div class="mt-6">
                       <button
                         type="button"
-                        class="inline-flex justify-center rounded-md border border-green-200 bg-green-100 dark:bg-green-700 dark:border-green-600 px-4 py-2 font-medium text-green-900 dark:text-neutral-100 smoothen hover:bg-green-200 dark:hover:bg-green-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                        class="inline-flex justify-center rounded-md border border-green-200 bg-green-100 dark:bg-green-700 dark:border-green-600 px-4 py-2 font-medium text-green-900 dark:text-gray-100 smoothen hover:bg-green-200 dark:hover:bg-green-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                         @click="setDialogClose()"
                       >
                         I understand
