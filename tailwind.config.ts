@@ -10,9 +10,6 @@ module.exports = {
   darkMode: "media",
   theme: {
     extend: {
-      fontFamily: {
-        display: ["Merriweather", "serif"],
-      },
       animation: {
         "bounce-l": "boing 3s infinite",
       },
