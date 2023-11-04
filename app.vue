@@ -4,7 +4,7 @@
       class="flex flex-col relative bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
     >
       <header
-        class="px-6 py-3 justify-between bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
+        class="px-6 py-3 justify-between fixed top-0 w-full bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
       >
         <nuxt-link
           to="/"
@@ -19,26 +19,26 @@
         </nuxt-link>
       </header>
 
-      <div class="grow flex h-full">
+      <div class="grow flex h-full md:pt-14">
         <div
           class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
-          :class="$route.query.series ? 'hidden lg:block' : ''"
+          :class="$route.query.recipes ? 'hidden lg:block' : ''"
         >
           <div class="flex flex-col gap-y-2">
             <p
               class="mb-1 dark:text-neutral-300 mt-10 text-neutral-800 text-3xl font-bold md:hidden"
             >
-              Folders
+              Categories
             </p>
             <span
               class="md:text-sm font-semibold md:font-normal ml-4 md:ml-2 md:dark:text-neutral-400 md:text-neutral-500"
-              >My Notes</span
+              >Recipes</span
             >
             <div class="flex flex-col gap-y-2 md:gap-y-1">
-              <div v-for="{ _path: url, title } in seriesList">
-                <div v-if="$route.query.series === url.slice(9)">
+              <div v-for="{ _path: url, title } in recipesList">
+                <div v-if="$route.query.recipes === url.slice(10)">
                   <div
-                    v-if="$route.query.story"
+                    v-if="$route.query.card"
                     class="flex flex-row gap-x-2 dark:bg-neutral-700 bg-neutral-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
                     <i
@@ -64,7 +64,7 @@
                 </div>
                 <nuxt-link
                   v-else
-                  :to="`?series=${url.slice(9)}`"
+                  :to="`?recipes=${url.slice(10)}`"
                   class="flex flex-row justify-between md:justify-start gap-x-2 md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen md:px-2 md:py-1 px-4 py-2 rounded-md no-underline"
                 >
                   <div class="flex flex-row gap-x-2">
@@ -90,82 +90,58 @@
 
         <div
           class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-neutral-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
-          :class="$route.query.story ? 'hidden md:block' : ''"
+          :class="$route.query.card ? 'hidden md:block' : ''"
         >
           <div
-            v-if="$route.query.series"
+            v-if="$route.query.recipes"
             class="flex flex-col gap-y-3 md:gap-y-2"
           >
             <div class="font-semibold lg:hidden">
               <button
-                v-if="$route.query.series"
+                v-if="$route.query.recipes"
                 class="flex flex-row gap-x-1 lg:hidden"
                 @click="$router.push('/')"
               >
                 <i
                   class="fa-solid fa-chevron-left my-auto dark:text-red-300"
                 ></i>
-                <span class="my-auto dark:text-red-300">Folders</span>
+                <span class="my-auto dark:text-red-300">Categories</span>
               </button>
             </div>
             <div>
               <p
-                v-if="$route.query.series === 'oneshots'"
+                v-if="$route.query.recipes === 'complete-meals'"
                 class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
-                Oneshots
+                Complete Meals
                 <span
                   class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                  >— {{ seriesOneshots.length }}
-                  {{ seriesOneshots.length > 1 ? "items" : "item" }}</span
+                  >— {{ recipesCompleteMeals.length }}
+                  {{ recipesCompleteMeals.length > 1 ? "items" : "item" }}</span
                 >
               </p>
 
               <p
-                v-else-if="$route.query.series === 'is-it-murder'"
+                v-else-if="$route.query.recipes === 'side-dishes'"
                 class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
-                Is It Murder?
+                Side Dishes
                 <span
                   class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                  >— {{ seriesIsItMurder.length }}
-                  {{ seriesIsItMurder.length > 1 ? "items" : "item" }}</span
-                >
-              </p>
-
-              <p
-                v-else-if="$route.query.series === 'dinners-ready'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
-              >
-                Dinner’s Ready!
-                <span
-                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                  >— {{ seriesDinnersReady.length }}
-                  {{ seriesDinnersReady.length > 1 ? "items" : "item" }}</span
-                >
-              </p>
-
-              <p
-                v-else-if="$route.query.series === 'promised'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
-              >
-                Promised.
-                <span
-                  class="text-sm hidden md:inline-block dark:text-neutral-400 text-neutral-500"
-                  >— {{ seriesPromised.length }}
-                  {{ seriesPromised.length > 1 ? "items" : "item" }}</span
+                  >— {{ recipesSideDishes.length }}
+                  {{ recipesSideDishes.length > 1 ? "items" : "item" }}</span
                 >
               </p>
             </div>
             <div class="flex flex-col gap-y-2">
               <div
-                v-if="$route.query.series === 'oneshots'"
-                v-for="{ _path: slug, title, date } in seriesOneshots"
+                v-if="$route.query.recipes === 'side-dishes'"
+                v-for="{ _path: slug, title, description } in recipesSideDishes"
               >
                 <div
                   v-if="
-                    $route.query.story ===
-                    slug.replaceAll('/', '').replace('oneshots', '')
+                    $route.query.card ===
+                    slug.replaceAll('/', '').replace('side-dishes', '')
                   "
                   class="w-full no-underline"
                 >
@@ -180,67 +156,16 @@
                     <span
                       class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
-                      {{ date }}
+                      {{ description }}
                     </span>
                   </div>
                 </div>
                 <nuxt-link
                   v-else
                   :key="slug"
-                  :to="`?series=oneshots&story=${slug
+                  :to="`?recipes=side-dishes&card=${slug
                     .replaceAll('/', '')
-                    .replace('oneshots', '')}`"
-                  class="w-full no-underline"
-                >
-                  <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
-                  >
-                    <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
-                    >
-                      {{ title }}
-                    </p>
-                    <span
-                      class="text-sm no-underline dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-neutral-500 text-ellipsis overflow-hidden whitespace-nowrap"
-                    >
-                      {{ date }}
-                    </span>
-                  </div>
-                </nuxt-link>
-              </div>
-
-              <div
-                v-else-if="$route.query.series === 'is-it-murder'"
-                v-for="{ _path: slug, title, date } in seriesIsItMurder"
-              >
-                <div
-                  v-if="
-                    $route.query.story ===
-                    slug.replaceAll('/', '').replace('is-it-murder', '')
-                  "
-                  class="w-full no-underline"
-                >
-                  <div
-                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
-                  >
-                    <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
-                    >
-                      {{ title }}
-                    </p>
-                    <span
-                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
-                    >
-                      {{ date }}
-                    </span>
-                  </div>
-                </div>
-                <nuxt-link
-                  v-else
-                  :key="slug"
-                  :to="`?series=is-it-murder&story=${slug
-                    .replaceAll('/', '')
-                    .replace('is-it-murder', '')}`"
+                    .replace('side-dishes', '')}`"
                   class="w-full no-underline"
                 >
                   <div
@@ -254,20 +179,24 @@
                     <span
                       class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
-                      {{ date }}
+                      {{ description }}
                     </span>
                   </div>
                 </nuxt-link>
               </div>
 
               <div
-                v-else-if="$route.query.series === 'dinners-ready'"
-                v-for="{ _path: slug, title, date } in seriesDinnersReady"
+                v-else-if="$route.query.recipes === 'complete-meals'"
+                v-for="{
+                  _path: slug,
+                  title,
+                  description,
+                } in recipesCompleteMeals"
               >
                 <div
                   v-if="
-                    $route.query.story ===
-                    slug.replaceAll('/', '').replace('dinners-ready', '')
+                    $route.query.card ===
+                    slug.replaceAll('/', '').replace('complete-meals', '')
                   "
                   class="w-full no-underline"
                 >
@@ -282,16 +211,16 @@
                     <span
                       class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
-                      {{ date }}
+                      {{ description }}
                     </span>
                   </div>
                 </div>
                 <nuxt-link
                   v-else
                   :key="slug"
-                  :to="`?series=dinners-ready&story=${slug
+                  :to="`?recipes=complete-meals&card=${slug
                     .replaceAll('/', '')
-                    .replace('dinners-ready', '')}`"
+                    .replace('complete-meals', '')}`"
                   class="w-full no-underline"
                 >
                   <div
@@ -305,58 +234,7 @@
                     <span
                       class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
                     >
-                      {{ date }}
-                    </span>
-                  </div>
-                </nuxt-link>
-              </div>
-
-              <div
-                v-else-if="$route.query.series === 'promised'"
-                v-for="{ _path: slug, title, date } in seriesPromised"
-              >
-                <div
-                  v-if="
-                    $route.query.story ===
-                    slug.replaceAll('/', '').replace('promised', '')
-                  "
-                  class="w-full no-underline"
-                >
-                  <div
-                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-red-900 bg-red-200 smoothen"
-                  >
-                    <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap text-neutral-700 dark:text-neutral-100 font-semibold"
-                    >
-                      {{ title }}
-                    </p>
-                    <span
-                      class="text-sm no-underline text-neutral-600 dark:text-neutral-300 text-ellipsis overflow-hidden whitespace-nowrap"
-                    >
-                      {{ date }}
-                    </span>
-                  </div>
-                </div>
-                <nuxt-link
-                  v-else
-                  :key="slug"
-                  :to="`?series=promised&story=${slug
-                    .replaceAll('/', '')
-                    .replace('promised', '')}`"
-                  class="w-full no-underline"
-                >
-                  <div
-                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 rounded-lg group md:bg-transparent dark:bg-neutral-700 bg-neutral-200 dark:bg-opacity-30 dark:hover:bg-neutral-700 hover:bg-neutral-300 smoothen"
-                  >
-                    <p
-                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
-                    >
-                      {{ title }}
-                    </p>
-                    <span
-                      class="text-sm no-underline text-neutral-500 dark:group-hover:text-neutral-400 group-hover:text-neutral-600 text-ellipsis overflow-hidden whitespace-nowrap"
-                    >
-                      {{ date }}
+                      {{ description }}
                     </span>
                   </div>
                 </nuxt-link>
@@ -368,50 +246,46 @@
               class="fa-solid fa-arrow-left text-lg animate-bounce-l mt-[0.15rem] -ml-1"
             ></i>
             <p class="font-light my-auto">
-              Click on any series on the left sidebar to select a story!
+              Click on any category on the left sidebar to select a recipe!
             </p>
           </div>
         </div>
 
         <div
-          class="flex flex-row md:mb-14 md:pt-0 pt-6 justify-center w-full overflow-y-auto"
-          :class="$route.query.story ? '' : 'hidden md:flex'"
+          class="flex flex-row md:pt-0 pt-6 justify-center w-full overflow-y-auto"
+          :class="$route.query.card ? '' : 'hidden md:flex'"
         >
           <div class="w-full">
             <div class="ml-6 font-semibold md:hidden">
               <button
-                v-if="$route.query.story"
+                v-if="$route.query.card"
                 class="flex flex-row gap-x-1"
                 @click="
-                  $router.push({ query: { series: $route.query.series } })
+                  $router.push({ query: { recipes: $route.query.recipes } })
                 "
               >
                 <i
                   class="fa-solid fa-chevron-left my-auto dark:text-red-300 text-red-700"
                 ></i>
                 <span class="my-auto dark:text-red-300 text-red-700"
-                  >Series</span
+                  >Recipes</span
                 >
               </button>
             </div>
             <div class="w-full">
               <ContentDoc
-                :path="`/${$route.query.series}/${$route.query.story}`"
+                :path="`/${$route.query.recipes}/${$route.query.card}`"
               >
                 <template #not-found>
                   <div
-                    v-if="$route.query.series"
+                    v-if="$route.query.recipes"
                     class="lg:mt-12 mt-20 hidden md:flex flex-row gap-x-4 ml-8"
                   >
                     <i
                       class="fa-solid fa-arrow-left text-lg animate-bounce-l mt-[0.15rem] -ml-1"
                     ></i>
                     <p class="font-light my-auto">
-                      Click on any
-                      {{
-                        $route.query.series === "oneshots" ? "story" : "episode"
-                      }}
-                      on the left sidebar to start reading!
+                      Click on any recipe on the left sidebar to start reading!
                     </p>
                   </div></template
                 >
@@ -421,7 +295,7 @@
                       (doc.img ? 'pb-2' : '',
                       'justify-center hidden md:flex mt-2 dark:text-neutral-400 text-neutral-600 text-sm')
                     "
-                    >{{ doc.date }}</span
+                    >{{ doc.description }}</span
                   >
                   <div class="p-4 pb-0" v-if="doc.img">
                     <img
@@ -437,7 +311,7 @@
                     </h1>
 
                     <div
-                      v-if="doc.date"
+                      v-if="doc.description"
                       class="mt-2 md:hidden dark:text-neutral-300 text-neutral-700 flex gap-x-3"
                     >
                       <i
@@ -445,7 +319,7 @@
                       ></i>
                       <span
                         class="justify-center w-full dark:text-neutral-400 text-neutral-600 my-auto"
-                        >{{ doc.date }}</span
+                        >{{ doc.description }}</span
                       >
                     </div>
                     <div
@@ -565,12 +439,10 @@ import {
   DialogTitle,
 } from "@headlessui/vue";
 
-const seriesOneshots = await queryContent("/oneshots").find();
-const seriesIsItMurder = await queryContent("/is-it-murder").find();
-const seriesDinnersReady = await queryContent("/dinners-ready").find();
-const seriesPromised = await queryContent("/promised").find();
+const recipesCompleteMeals = await queryContent("/complete-meals").find();
+const recipesSideDishes = await queryContent("/side-dishes").find();
 
-const seriesList = await queryContent("/_series").find();
+const recipesList = await queryContent("/_recipes").find();
 
 const dialogOpen = ref(checkAgreed());
 
