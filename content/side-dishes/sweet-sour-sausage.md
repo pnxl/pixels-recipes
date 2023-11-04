@@ -1,6 +1,5 @@
 ---
 title: Cigarette Burns All Over Her Coat
-date: 29 April 2023
 ---
 
 Sharp, successful, calm, perfect. Shaylynn was never described with a single insult. Being the oldest in the family, she was always the one who had to deal with the chaos. Their parents spent their time in bars, clubs, anywhere except home. They had a maid, but she was only there for cooking and cleaning, while Shaylynn had to take care of her younger siblings.
