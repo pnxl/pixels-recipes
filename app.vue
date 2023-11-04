@@ -311,7 +311,7 @@
                     </div>
                     <ContentRenderer
                       :value="doc"
-                      class="prose mt-6 min-w-full dark:prose-invert prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
+                      class="prose mt-6 min-w-full dark:prose-invert prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl prose-h3:font-semibold prose-h4:text-xl prose-h4:font-medium prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
                     >
                     </ContentRenderer>
                   </div>
