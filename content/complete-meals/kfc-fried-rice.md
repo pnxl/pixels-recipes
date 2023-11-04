@@ -7,9 +7,9 @@ description: A twist on fried rice with KFC Fried Chicken.
 
 - A portion of cold, leftover rice
 - 1 Egg
-- 1 KFC Fried Chicken (Original/Spicy)
+- 1 KFC Fried Chicken (or any other restaurant)
 - 1 Scallion
-- 1 1/2 tbsp of Oyster Sauce or Soy Sauce
+- 1 ½ tbsp of Oyster Sauce or Soy Sauce
 - 1 tbsp of Butter or Cooking Oil
 - Salt and Pepper as needed
 
