@@ -8,9 +8,9 @@
       >
         <nuxt-link
           to="/"
-          class="no-underline group gap-x-3 smoothen hidden md:flex"
+          class="no-underline group gap-x-3 my-1 smoothen hidden md:flex"
         >
-          <img src="@/static/icon.png" class="h-8 w-8 my-auto" />
+          <img src="@/static/icon.png" class="h-7 w-7 my-auto" />
           <h1
             class="my-auto font-bold dark:text-gray-300 text-gray-700 group-hover:text-gray-900 dark:group-hover:text-gray-100 smoothen"
           >
