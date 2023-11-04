@@ -3,89 +3,18 @@
     <div
       class="flex flex-col relative bg-neutral-50 dark:bg-neutral-900 h-screen overflow-hidden"
     >
-      <Menu
-        as="div"
-        class="absolute hidden top-0 right-2 h-14 md:flex flex-col justify-center"
-      >
-        <div class="group">
-          <MenuButton
-            class="dark:hover:bg-neutral-700 hover:bg-neutral-200 transition py-2 px-[0.625rem] rounded-lg"
-          >
-            <i
-              class="fa-solid fa-share-from-square my-auto dark:text-neutral-300 text-neutral-600"
-            ></i>
-          </MenuButton>
-        </div>
-
-        <transition
-          enter-active-class="transition duration-100 ease-out"
-          enter-from-class="transform scale-95 opacity-0"
-          enter-to-class="transform scale-100 opacity-100"
-          leave-active-class="transition duration-75 ease-in"
-          leave-from-class="transform scale-100 opacity-100"
-          leave-to-class="transform scale-95 opacity-0"
-        >
-          <MenuItems
-            class="absolute right-0 top-0 mt-2 w-64 divide-y rounded-lg dark:bg-neutral-800 border dark:border-neutral-700 border-neutral-200 bg-neutral-100 shadow-lg"
-          >
-            <div class="p-3 flex flex-col">
-              <div
-                class="inline-flex gap-x-2 border-b w-full pb-3 mb-3 border-neutral-500"
-              >
-                <img src="@/static/icon.png" class="h-8 w-8 my-auto" />
-                <div class="flex flex-col">
-                  <h1
-                    class="my-auto font-bold font-display dark:text-neutral-300 text-neutral-700 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 smoothen"
-                  >
-                    Nadine’s Journal
-                  </h1>
-                  <span
-                    class="my-auto text-sm text-neutral-600 dark:text-neutral-400 smoothen"
-                  >
-                    nadines-journal.pnxl.dev
-                  </span>
-                </div>
-              </div>
-              <MenuItem>
-                <a
-                  :href="`mailto:?subject=I found a cool story!&amp;body=Check out this cool story I found on Nadine's Journal! https://nadines-journal.pnxl.dev${$nuxt.$route.fullPath}`"
-                  class="flex w-full items-center group rounded-md px-2 py-1 gap-x-2 no-underline transition hover:text-neutral-900 dark:hover:bg-neutral-700 hover:bg-neutral-200 text-neutral-900"
-                >
-                  <i
-                    class="fa-solid fa-envelope my-auto text-lg text-blue-400 dark:group-hover:text-neutral-100 group-hover:text-neutral-900 transition"
-                  ></i>
-                  <p class="my-auto">Email</p>
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  target="_blank"
-                  :href="`https://api.whatsapp.com/send/?text=Check out this cool story I found on Nadine\'s Journal! https://nadines-journal.pnxl.dev${$nuxt.$route.fullPath}`"
-                  class="flex w-full items-center group rounded-md px-2 py-1 gap-x-2 no-underline transition hover:text-neutral-900 dark:hover:bg-neutral-700 hover:bg-neutral-200 text-neutral-900"
-                >
-                  <i
-                    class="fa-brands fa-whatsapp my-auto text-lg text-green-400 dark:group-hover:text-neutral-100 group-hover:text-neutral-900 transition"
-                  ></i>
-                  <p class="my-auto">WhatsApp</p>
-                </a>
-              </MenuItem>
-            </div>
-          </MenuItems>
-        </transition>
-      </Menu>
-
       <header
         class="px-6 py-3 justify-between bg-neutral-100 hidden md:flex border-b border-[rgb(187,187,187)] dark:bg-neutral-800 dark:border-neutral-700 shadow-lg"
       >
         <nuxt-link
           to="/"
-          class="no-underline font-display group gap-x-3 smoothen hidden md:flex"
+          class="no-underline group gap-x-3 smoothen hidden md:flex"
         >
           <img src="@/static/icon.png" class="h-8 w-8 my-auto" />
           <h1
             class="my-auto font-bold dark:text-neutral-300 text-neutral-700 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 smoothen"
           >
-            Nadine’s Journal
+            Pixel’s Recipes
           </h1>
         </nuxt-link>
       </header>
@@ -97,7 +26,7 @@
         >
           <div class="flex flex-col gap-y-2">
             <p
-              class="mb-1 dark:text-neutral-300 mt-10 text-neutral-800 font-display text-3xl font-bold md:hidden"
+              class="mb-1 dark:text-neutral-300 mt-10 text-neutral-800 text-3xl font-bold md:hidden"
             >
               Folders
             </p>
@@ -182,7 +111,7 @@
             <div>
               <p
                 v-if="$route.query.series === 'oneshots'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
                 Oneshots
                 <span
@@ -194,7 +123,7 @@
 
               <p
                 v-else-if="$route.query.series === 'is-it-murder'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
                 Is It Murder?
                 <span
@@ -206,7 +135,7 @@
 
               <p
                 v-else-if="$route.query.series === 'dinners-ready'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
                 Dinner’s Ready!
                 <span
@@ -218,7 +147,7 @@
 
               <p
                 v-else-if="$route.query.series === 'promised'"
-                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 font-display md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
+                class="md:text-sm my-1 md:my-0 dark:text-neutral-300 text-neutral-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-neutral-400 md:text-neutral-500"
               >
                 Promised.
                 <span
@@ -438,7 +367,7 @@
             <i
               class="fa-solid fa-arrow-left text-lg animate-bounce-l mt-[0.15rem] -ml-1"
             ></i>
-            <p class="font-display font-light my-auto">
+            <p class="font-light my-auto">
               Click on any series on the left sidebar to select a story!
             </p>
           </div>
@@ -477,7 +406,7 @@
                     <i
                       class="fa-solid fa-arrow-left text-lg animate-bounce-l mt-[0.15rem] -ml-1"
                     ></i>
-                    <p class="font-display font-light my-auto">
+                    <p class="font-light my-auto">
                       Click on any
                       {{
                         $route.query.series === "oneshots" ? "story" : "episode"
@@ -502,7 +431,7 @@
                   </div>
                   <div class="md:p-8 p-6 pt-4 min-w-full">
                     <h1
-                      class="font-display font-bold text-3xl dark:text-neutral-300 text-neutral-800"
+                      class="font-bold text-3xl dark:text-neutral-300 text-neutral-800"
                     >
                       {{ doc.title }}
                     </h1>
@@ -582,7 +511,7 @@
                 >
                   <DialogTitle
                     as="h3"
-                    class="text-lg font-semibold font-display leading-6 text-neutral-900 dark:text-neutral-100"
+                    class="text-lg font-semibold leading-6 text-neutral-900 dark:text-neutral-100"
                   >
                     Important Disclaimer
                   </DialogTitle>
@@ -634,10 +563,6 @@ import {
   Dialog,
   DialogPanel,
   DialogTitle,
-  Menu,
-  MenuButton,
-  MenuItems,
-  MenuItem,
 } from "@headlessui/vue";
 
 const seriesOneshots = await queryContent("/oneshots").find();

@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
 
-      title: "Nadine’s Journal",
+      title: "Pixel’s Recipes",
       meta: [
         // basic meta
         {
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
         // ogp
         {
           property: "og:title",
-          content: "Nadine’s Journal",
+          content: "Pixel’s Recipes",
         },
         {
           property: "og:type",
