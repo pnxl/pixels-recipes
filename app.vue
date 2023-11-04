@@ -319,19 +319,6 @@
                         >{{ doc.description }}</span
                       >
                     </div>
-                    <div
-                      v-if="doc.song"
-                      class="dark:text-gray-300 mt-2 text-gray-700 flex gap-x-3"
-                    >
-                      <i
-                        class="fa-solid fa-music dark:text-gray-400 text-gray-600 mt-[0.375rem]"
-                      ></i>
-                      <p class="dark:text-gray-400 text-gray-600">
-                        The author suggests you to listen to
-                        <a :href="doc.song[1]">{{ doc.song[0] }}</a> while
-                        reading this story.
-                      </p>
-                    </div>
                     <ContentRenderer
                       :value="doc"
                       class="prose mt-6 min-w-full prose-invert prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
