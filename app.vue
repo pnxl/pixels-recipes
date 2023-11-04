@@ -287,13 +287,6 @@
                   </div></template
                 >
                 <template v-slot="{ doc }">
-                  <span
-                    :class="
-                      (doc.img ? 'pb-2' : '',
-                      'justify-center hidden md:flex mt-2 dark:text-gray-400 text-gray-600 text-sm')
-                    "
-                    >{{ doc.description }}</span
-                  >
                   <div class="p-4 pb-0" v-if="doc.img">
                     <img
                       :src="doc.img"
@@ -309,11 +302,8 @@
 
                     <div
                       v-if="doc.description"
-                      class="mt-2 md:hidden dark:text-gray-300 text-gray-700 flex gap-x-3"
+                      class="mt-2 dark:text-gray-300 text-gray-700 flex gap-x-3"
                     >
-                      <i
-                        class="fa-solid fa-calendar dark:text-gray-400 text-gray-600 mt-[0.375rem]"
-                      ></i>
                       <span
                         class="justify-center w-full dark:text-gray-400 text-gray-600 my-auto"
                         >{{ doc.description }}</span
