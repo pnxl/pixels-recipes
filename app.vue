@@ -21,7 +21,7 @@
 
       <div class="grow flex h-full md:pt-14">
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-gray-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-gray-100 md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-gray-300 md:dark:bg-gray-800 dark:border-gray-700"
           :class="$route.query.recipes ? 'hidden lg:block' : ''"
         >
           <div class="flex flex-col gap-y-2">
@@ -86,7 +86,7 @@
         </div>
 
         <div
-          class="h-full shrink-0 md:bg-[rgb(237,237,237)] md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-gray-300 md:dark:bg-[rgb(31,31,31)] dark:border-[rgb(51,51,51)]"
+          class="h-full shrink-0 md:bg-gray-100 md:w-1/3 lg:w-1/4 w-full border-r md:p-4 p-6 border-gray-300 md:dark:bg-gray-800 dark:border-gray-700"
           :class="$route.query.card ? 'hidden md:block' : ''"
         >
           <div
@@ -311,7 +311,7 @@
                     </div>
                     <ContentRenderer
                       :value="doc"
-                      class="prose mt-6 min-w-full prose-invert prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
+                      class="prose mt-6 min-w-full dark:prose-invert prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
                     >
                     </ContentRenderer>
                   </div>
