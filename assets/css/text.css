@@ -1,5 +1,5 @@
 a {
-  @apply underline transition hover:text-red-300 text-red-400;
+  @apply transition hover:text-red-300 text-red-400;
 }
 
 * {
