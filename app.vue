@@ -42,7 +42,7 @@
                     class="flex flex-row gap-x-2 dark:bg-gray-700 bg-gray-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
                     <i
-                      class="fa-solid fa-folder my-auto text-indigo-500 dark:text-indigo-400"
+                      class="fa-solid fa-folder my-auto text-sky-500 dark:text-sky-400"
                     ></i
                     ><span class="my-auto text-gray-700 dark:text-gray-200">{{
                       title
@@ -50,7 +50,7 @@
                   </div>
                   <div
                     v-else
-                    class="flex flex-row gap-x-2 dark:bg-indigo-900 bg-indigo-200 smoothen px-2 py-1 rounded-md no-underline"
+                    class="flex flex-row gap-x-2 dark:bg-sky-900 bg-sky-200 smoothen px-2 py-1 rounded-md no-underline"
                   >
                     <i
                       class="fa-solid fa-folder my-auto text-gray-700 dark:text-gray-200"
@@ -100,9 +100,9 @@
                 @click="$router.push('/')"
               >
                 <i
-                  class="fa-solid fa-chevron-left my-auto dark:text-indigo-300"
+                  class="fa-solid fa-chevron-left my-auto dark:text-sky-300"
                 ></i>
-                <span class="my-auto dark:text-indigo-300">Categories</span>
+                <span class="my-auto dark:text-sky-300">Categories</span>
               </button>
             </div>
             <div>
@@ -143,7 +143,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-indigo-900 bg-indigo-200 smoothen"
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-sky-900 bg-sky-200 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap text-gray-700 dark:text-gray-100 font-semibold"
@@ -198,7 +198,7 @@
                   class="w-full no-underline"
                 >
                   <div
-                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-indigo-900 bg-indigo-200 smoothen"
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-sky-900 bg-sky-200 smoothen"
                   >
                     <p
                       class="text-ellipsis overflow-hidden whitespace-nowrap text-gray-700 dark:text-gray-100 font-semibold"
@@ -262,9 +262,9 @@
                 "
               >
                 <i
-                  class="fa-solid fa-chevron-left my-auto dark:text-indigo-300 text-indigo-700"
+                  class="fa-solid fa-chevron-left my-auto dark:text-sky-300 text-sky-700"
                 ></i>
-                <span class="my-auto dark:text-indigo-300 text-indigo-700"
+                <span class="my-auto dark:text-sky-300 text-sky-700"
                   >Recipes</span
                 >
               </button>
