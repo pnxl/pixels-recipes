@@ -322,96 +322,11 @@
         </div>
       </div>
     </div>
-    <ClientOnly>
-      <TransitionRoot appear :show="dialogOpen" as="template">
-        <Dialog
-          as="div"
-          @close="setDialogCloseNoAccept()"
-          class="relative z-10"
-        >
-          <TransitionChild
-            as="template"
-            enter="duration-300 ease-out"
-            enter-from="opacity-0"
-            enter-to="opacity-100"
-            leave="duration-200 ease-in"
-            leave-from="opacity-100"
-            leave-to="opacity-0"
-          >
-            <div class="fixed inset-0 bg-black bg-opacity-75" />
-          </TransitionChild>
-
-          <div class="fixed inset-0 overflow-y-auto">
-            <div
-              class="flex min-h-full items-center justify-center p-4 text-center"
-            >
-              <TransitionChild
-                as="template"
-                enter="duration-300 ease-out"
-                enter-from="opacity-0 scale-95"
-                enter-to="opacity-100 scale-100"
-                leave="duration-200 ease-in"
-                leave-from="opacity-100 scale-100"
-                leave-to="opacity-0 scale-95"
-              >
-                <DialogPanel
-                  class="w-full max-w-md transform overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-900 p-6 text-left align-middle shadow-xl transition-all"
-                >
-                  <DialogTitle
-                    as="h3"
-                    class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100"
-                  >
-                    Important Disclaimer
-                  </DialogTitle>
-                  <div class="mt-4 flex flex-col gap-y-4">
-                    <p class="text-gray-700 dark:text-gray-300">
-                      The work that can be found here are all purely fictional
-                      and does not depict any real-life individuals or events.
-                      Any similarities to actual persons, living or deceased, or
-                      to real-life situations are purely coincidental.
-                    </p>
-                    <p class="text-gray-700 dark:text-gray-300">
-                      The characters, names, and incidents in this story are
-                      products of the author's imagination and have been created
-                      for artistic purposes.
-                    </p>
-                    <p class="text-gray-700 dark:text-gray-300">
-                      All rights to this fictional work are reserved, and
-                      unauthorized reproduction, distribution, or adaptation is
-                      prohibited without written permission.
-                    </p>
-                  </div>
-
-                  <div class="flex justify-end">
-                    <div class="mt-6">
-                      <button
-                        type="button"
-                        class="inline-flex justify-center rounded-md border border-green-200 bg-green-100 dark:bg-green-700 dark:border-green-600 px-4 py-2 font-medium text-green-900 dark:text-gray-100 smoothen hover:bg-green-200 dark:hover:bg-green-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
-                        @click="setDialogClose()"
-                      >
-                        I understand
-                      </button>
-                    </div>
-                  </div>
-                </DialogPanel>
-              </TransitionChild>
-            </div>
-          </div>
-        </Dialog>
-      </TransitionRoot>
-    </ClientOnly>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/vue";
 
 const recipesCompleteMeals = await queryContent("/complete-meals").find();
 const recipesSideDishes = await queryContent("/side-dishes").find();
@@ -427,11 +342,4 @@ function checkAgreed() {
     return true;
   }
 }
-
-function setDialogClose() {
-  dialogOpen.value = false;
-  localStorage.setItem("agree", JSON.stringify(true));
-}
-
-function setDialogCloseNoAccept() {}
 </script>
