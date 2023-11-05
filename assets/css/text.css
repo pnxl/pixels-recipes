@@ -1,5 +1,5 @@
 a {
-  @apply transition hover:text-sky-300 text-sky-400;
+  @apply transition dark:hover:text-sky-500 hover:text-sky-800 cursor-pointer;
 }
 
 * {
