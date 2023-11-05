@@ -9,7 +9,7 @@ description: Versatile Japanese frying marinade with a sweet and tangy flavor.
 - 4 tbsp Soy Sauce
 - 3 tbsp Mirin
 - 3 tsp Sugar
-- 1 tbsp Vinegar
+- 1 tbsp Cooking Vinegar
 - Slices of Ginger
 
 #### Steps
