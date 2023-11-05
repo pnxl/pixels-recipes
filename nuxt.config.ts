@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 
   css: [
     "@fontsource/raleway/400.css",
+    "@fontsource/raleway/500.css",
     "@fontsource/raleway/600.css",
     "@fontsource/raleway/700.css",
     "@/assets/css/prism.css",
