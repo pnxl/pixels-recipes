@@ -362,15 +362,12 @@
                   </div>
                   <div class="md:p-8 p-6 pt-4 min-w-full">
                     <h1
-                      class="font-bold text-3xl dark:text-gray-300 text-gray-800"
+                      class="font-bold text-3xl dark:text-gray-100 text-gray-900"
                     >
                       {{ doc.title }}
                     </h1>
 
-                    <div
-                      v-if="doc.description"
-                      class="mt-2 dark:text-gray-300 text-gray-700 flex gap-x-3"
-                    >
+                    <div v-if="doc.description" class="mt-2 flex gap-x-3">
                       <span
                         class="justify-center w-full dark:text-gray-400 text-gray-600 my-auto"
                         >{{ doc.description }}</span
@@ -378,7 +375,7 @@
                     </div>
                     <ContentRenderer
                       :value="doc"
-                      class="prose mt-6 min-w-full dark:prose-invert prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl prose-h3:font-semibold prose-h4:text-xl prose-h4:font-medium prose-a:no-underline prose-a:transition prose-blockquote:font-normal prose-code:rounded-md prose-code:bg-opacity-60 prose-code:p-1 prose-code:font-mono prose-p:font-normal prose-li:marker:text-gray-500 prose-code:before:content-none prose-code:after:content-none"
+                      class="prose mt-6 min-w-full marker:text-gray-600 dark:marker:text-gray-400 dark:prose-li:text-gray-300 dark:prose-p:text-gray-300 dark:prose-marker:text-gray-400 prose-li:text-gray-700 prose-p:text-gray-700 dark:prose-invert prose-h1:text-3xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-a:font-normal"
                     >
                     </ContentRenderer>
                   </div>
@@ -411,3 +408,19 @@ function checkAgreed() {
   }
 }
 </script>
+
+<style>
+h4 > a {
+  font-weight: 500 !important;
+  text-decoration-line: none !important;
+  color: rgb(17 24 39) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  h4 > a {
+    font-weight: 500 !important;
+    text-decoration-line: none !important;
+    color: rgb(243 244 246) !important;
+  }
+}
+</style>
