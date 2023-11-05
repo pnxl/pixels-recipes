@@ -129,6 +129,18 @@
                   {{ recipesSideDishes.length > 1 ? "items" : "item" }}</span
                 >
               </p>
+
+              <p
+                v-else-if="$route.query.recipes === 'sauces-and-dressings'"
+                class="md:text-sm my-1 md:my-0 dark:text-gray-300 text-gray-800 md:ml-2 md:font-sans text-3xl font-bold md:font-normal md:dark:text-gray-400 md:text-gray-500"
+              >
+                Sauces and Dressings
+                <span
+                  class="text-sm hidden md:inline-block dark:text-gray-400 text-gray-500"
+                  >— {{ recipesSideDishes.length }}
+                  {{ recipesSideDishes.length > 1 ? "items" : "item" }}</span
+                >
+              </p>
             </div>
             <div class="flex flex-col gap-y-2">
               <div
@@ -218,6 +230,61 @@
                   :to="`?recipes=complete-meals&card=${slug
                     .replaceAll('/', '')
                     .replace('complete-meals', '')}`"
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-4 py-2 md:px-2 md:py-1 group rounded-lg md:bg-transparent dark:bg-gray-700 bg-gray-200 dark:bg-opacity-30 dark:hover:bg-gray-700 hover:bg-gray-300 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-gray-500 dark:group-hover:text-gray-400 group-hover:text-gray-600 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ description }}
+                    </span>
+                  </div>
+                </nuxt-link>
+              </div>
+
+              <div
+                v-else-if="$route.query.recipes === 'sauces-and-dressings'"
+                v-for="{
+                  _path: slug,
+                  title,
+                  description,
+                } in recipesSaucesAndDressings"
+              >
+                <div
+                  v-if="
+                    $route.query.card ===
+                    slug.replaceAll('/', '').replace('sauces-and-dressings', '')
+                  "
+                  class="w-full no-underline"
+                >
+                  <div
+                    class="flex flex-col px-2 py-1 rounded-lg dark:bg-sky-900 bg-sky-200 smoothen"
+                  >
+                    <p
+                      class="text-ellipsis overflow-hidden whitespace-nowrap text-gray-700 dark:text-gray-100 font-semibold"
+                    >
+                      {{ title }}
+                    </p>
+                    <span
+                      class="text-sm no-underline text-gray-600 dark:text-gray-300 text-ellipsis overflow-hidden whitespace-nowrap"
+                    >
+                      {{ description }}
+                    </span>
+                  </div>
+                </div>
+                <nuxt-link
+                  v-else
+                  :key="slug"
+                  :to="`?recipes=sauces-and-dressings&card=${slug
+                    .replaceAll('/', '')
+                    .replace('sauces-and-dressings', '')}`"
                   class="w-full no-underline"
                 >
                   <div
@@ -330,10 +397,11 @@ import { ref } from "vue";
 
 const recipesCompleteMeals = await queryContent("/complete-meals").find();
 const recipesSideDishes = await queryContent("/side-dishes").find();
+const recipesSaucesAndDressings = await queryContent(
+  "/sauces-and-dressings"
+).find();
 
 const recipesList = await queryContent("/_recipes").find();
-
-const dialogOpen = ref(checkAgreed());
 
 function checkAgreed() {
   if (process.client && window.localStorage.getItem("agree") == "true") {
