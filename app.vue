@@ -21,7 +21,7 @@
 
       <div class="grow flex h-full md:pt-14">
         <div
-          class="h-full shrink-0 md:bg-gray-100 md:w-1/3 lg:w-1/6 w-full border-r p-6 md:p-4 border-gray-300 md:dark:bg-gray-800 dark:border-gray-700"
+          class="h-full shrink-0 md:bg-gray-100 md:w-1/3 lg:w-1/5 xl:w-1/6 w-full border-r p-6 md:p-4 border-gray-300 md:dark:bg-gray-800 dark:border-gray-700"
           :class="$route.query.recipes ? 'hidden lg:block' : ''"
         >
           <div class="flex flex-col gap-y-2">
