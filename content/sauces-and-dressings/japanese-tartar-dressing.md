@@ -18,4 +18,4 @@ description: Crispy breaded chicken cutlets glazed with Teriyaki sauce.
 1. Add your ingredients into a bowl.
 2. Mix together with a fork, press down on the eggs while mixing to smash them.
 3. Mix thoroughly.
-4. You can use this dressing to cut through fried, fatty foods.
+4. You can use this dressing to compliment with fried, fatty foods.
