@@ -11,7 +11,7 @@ description: Bite sized sausages covered in a sweet and sour sauce.
 - 1 tsp Sweet Soy Sauce
 - 1 tsp Soy Sauce
 - 1 tsp Pepper
-- 1 tsp Mushroom Seasoning
+- 1 tsp Mushroom Bouillon
 - Sugar
 - Water, as needed
 
