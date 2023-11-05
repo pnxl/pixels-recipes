@@ -6,9 +6,9 @@ description: Layered rice bowl with crab sticks, nuggets, and a mentai sauce top
 #### Ingredients
 
 - A portion of cold, leftover rice
-- 1 tbsp of Sesame Oil
-- 1 tbsp of Bon Nori
-- ½ tbsp of Soy Sauce
+- 1 tbsp Sesame Oil
+- 1 tbsp Bon Nori
+- ½ tbsp Soy Sauce
 - Crab Sticks
 - Nuggets
 - Mentai Sauce

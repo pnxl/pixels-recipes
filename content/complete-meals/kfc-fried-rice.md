@@ -9,8 +9,8 @@ description: A twist on fried rice with KFC Fried Chicken.
 - 1 Egg
 - 1 KFC Fried Chicken (or any other restaurant)
 - 1 Scallion
-- 1 ½ tbsp of Oyster Sauce or Soy Sauce
-- 1 tbsp of Butter or Cooking Oil
+- 1 ½ tbsp Oyster Sauce or Soy Sauce
+- 1 tbsp Butter or Cooking Oil
 - Salt and Pepper as needed
 
 #### Steps

@@ -6,9 +6,9 @@ description: Simple bolognese pasta with champignon mushrooms.
 #### Ingredients
 
 - 5 champignon mushrooms
-- 3 tbsp of Frying Oil
+- 3 tbsp Frying Oil
 - Pinch of Salt
-- ½ tbsp of Butter
+- ½ tbsp Butter
 - ½ Onion, diced
 - 1 Garlic, diced
 - Ready-to-go Bolognese Sauce

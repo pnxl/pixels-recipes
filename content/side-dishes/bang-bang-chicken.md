@@ -11,9 +11,9 @@ description: Chicken breast covered in a sweet and spicy sauce.
 - 2 tbsp Cooking Oil
 - 1 Scallion
 - Salt and Pepper as needed
-- 2 tbsp of Sweet Chilli Sauce
-- 1 tbsp of Honey
-- 1 tsp of Soy Sauce
+- 2 tbsp Sweet Chilli Sauce
+- 1 tbsp Honey
+- 1 tsp Soy Sauce
 - Squeeze of Lemon Juice
 
 #### Steps
