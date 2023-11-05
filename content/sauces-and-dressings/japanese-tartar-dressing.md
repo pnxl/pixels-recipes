@@ -1,6 +1,6 @@
 ---
 title: Japanese Tartar Dressing
-description: Crispy breaded chicken cutlets glazed with Teriyaki sauce.
+description: Creamy blend of eggs, Kewpie mayo, and zesty seasonings, great for cutting through fatty fried foods.
 ---
 
 #### Ingredients
