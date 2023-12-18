@@ -39,16 +39,16 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Hey! I’m Nadine, an amateur story writer from Indonesia. This is my little website, where it holds some of my works. Keep in mind, I’m still learning on how to write properly but hope to improve in every project! Hope you enjoy reading my works or possibly just looking around! Thank you and have fun. 💛",
+            "Hi there! I'm Jason - yes, the same Jason on pnxl.dev. This website holds some of my recipes that I've made, I hope you enjoy making them!",
         },
         {
           name: "keywords",
           content:
-            "nadines, journal, fictional, stories, indonesia, ameteur, writer, story",
+            "pnxl, recipes, cooking, jason, cookpad, recipe",
         },
         {
           name: "author",
-          content: "Nadine",
+          content: "Jason",
         },
 
         // ogp
